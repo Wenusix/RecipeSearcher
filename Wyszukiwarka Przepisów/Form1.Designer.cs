@@ -78,10 +78,11 @@
             panelTitleBar.Controls.Add(this.IblTitleChildForm);
             panelTitleBar.Controls.Add(this.iconCurrentChildForm);
             panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            panelTitleBar.Location = new System.Drawing.Point(262, 0);
+            panelTitleBar.Location = new System.Drawing.Point(175, 0);
+            panelTitleBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             panelTitleBar.Name = "panelTitleBar";
             panelTitleBar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            panelTitleBar.Size = new System.Drawing.Size(959, 62);
+            panelTitleBar.Size = new System.Drawing.Size(639, 41);
             panelTitleBar.TabIndex = 1;
             panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -89,9 +90,10 @@
             // 
             this.IblTitleChildForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.IblTitleChildForm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.IblTitleChildForm.Location = new System.Drawing.Point(60, 14);
+            this.IblTitleChildForm.Location = new System.Drawing.Point(40, 9);
+            this.IblTitleChildForm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IblTitleChildForm.Name = "IblTitleChildForm";
-            this.IblTitleChildForm.Size = new System.Drawing.Size(120, 29);
+            this.IblTitleChildForm.Size = new System.Drawing.Size(80, 19);
             this.IblTitleChildForm.TabIndex = 1;
             this.IblTitleChildForm.Text = "O aplikacji";
             this.IblTitleChildForm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -103,9 +105,11 @@
             this.iconCurrentChildForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
             this.iconCurrentChildForm.IconColor = System.Drawing.SystemColors.ControlLightLight;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(22, 12);
+            this.iconCurrentChildForm.IconSize = 21;
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(15, 8);
+            this.iconCurrentChildForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconCurrentChildForm.Name = "iconCurrentChildForm";
-            this.iconCurrentChildForm.Size = new System.Drawing.Size(32, 32);
+            this.iconCurrentChildForm.Size = new System.Drawing.Size(21, 21);
             this.iconCurrentChildForm.TabIndex = 0;
             this.iconCurrentChildForm.TabStop = false;
             // 
@@ -122,8 +126,9 @@
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(262, 671);
+            this.panelMenu.Size = new System.Drawing.Size(175, 436);
             this.panelMenu.TabIndex = 0;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -139,10 +144,11 @@
             this.iconButton7.IconColor = System.Drawing.Color.White;
             this.iconButton7.IconSize = 25;
             this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton7.Location = new System.Drawing.Point(33, 595);
+            this.iconButton7.Location = new System.Drawing.Point(22, 408);
+            this.iconButton7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButton7.Name = "iconButton7";
             this.iconButton7.Rotation = 0D;
-            this.iconButton7.Size = new System.Drawing.Size(200, 52);
+            this.iconButton7.Size = new System.Drawing.Size(133, 34);
             this.iconButton7.TabIndex = 7;
             this.iconButton7.Text = "Zamkniij";
             this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,10 +168,11 @@
             this.iconButton6.IconColor = System.Drawing.Color.White;
             this.iconButton6.IconSize = 25;
             this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton6.Location = new System.Drawing.Point(33, 458);
+            this.iconButton6.Location = new System.Drawing.Point(22, 319);
+            this.iconButton6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButton6.Name = "iconButton6";
             this.iconButton6.Rotation = 0D;
-            this.iconButton6.Size = new System.Drawing.Size(200, 52);
+            this.iconButton6.Size = new System.Drawing.Size(133, 34);
             this.iconButton6.TabIndex = 6;
             this.iconButton6.Text = "Kontakt";
             this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -185,10 +192,11 @@
             this.iconButton5.IconColor = System.Drawing.Color.White;
             this.iconButton5.IconSize = 25;
             this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton5.Location = new System.Drawing.Point(33, 526);
+            this.iconButton5.Location = new System.Drawing.Point(22, 363);
+            this.iconButton5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Rotation = 0D;
-            this.iconButton5.Size = new System.Drawing.Size(200, 52);
+            this.iconButton5.Size = new System.Drawing.Size(133, 34);
             this.iconButton5.TabIndex = 5;
             this.iconButton5.Text = "Kod aplikacji";
             this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -208,10 +216,11 @@
             this.iconButton4.IconColor = System.Drawing.Color.White;
             this.iconButton4.IconSize = 25;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton4.Location = new System.Drawing.Point(33, 387);
+            this.iconButton4.Location = new System.Drawing.Point(22, 273);
+            this.iconButton4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Rotation = 0D;
-            this.iconButton4.Size = new System.Drawing.Size(200, 52);
+            this.iconButton4.Size = new System.Drawing.Size(133, 34);
             this.iconButton4.TabIndex = 4;
             this.iconButton4.Text = "Cookidoo";
             this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,10 +240,11 @@
             this.iconButton3.IconColor = System.Drawing.Color.White;
             this.iconButton3.IconSize = 25;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton3.Location = new System.Drawing.Point(33, 318);
+            this.iconButton3.Location = new System.Drawing.Point(22, 228);
+            this.iconButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Rotation = 0D;
-            this.iconButton3.Size = new System.Drawing.Size(200, 52);
+            this.iconButton3.Size = new System.Drawing.Size(133, 34);
             this.iconButton3.TabIndex = 3;
             this.iconButton3.Text = "Ulubione";
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -254,10 +264,11 @@
             this.iconButton2.IconColor = System.Drawing.Color.White;
             this.iconButton2.IconSize = 25;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton2.Location = new System.Drawing.Point(33, 246);
+            this.iconButton2.Location = new System.Drawing.Point(22, 181);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Rotation = 0D;
-            this.iconButton2.Size = new System.Drawing.Size(200, 52);
+            this.iconButton2.Size = new System.Drawing.Size(133, 34);
             this.iconButton2.TabIndex = 2;
             this.iconButton2.Text = "Wyszukiwanie";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -277,11 +288,12 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconSize = 25;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton1.Location = new System.Drawing.Point(33, 178);
+            this.iconButton1.Location = new System.Drawing.Point(22, 137);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(200, 52);
+            this.iconButton1.Size = new System.Drawing.Size(133, 34);
             this.iconButton1.TabIndex = 1;
             this.iconButton1.Text = "O aplikacji";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -294,8 +306,9 @@
             this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(262, 155);
+            this.panelLogo.Size = new System.Drawing.Size(175, 101);
             this.panelLogo.TabIndex = 0;
             // 
             // pictureBox1
@@ -304,9 +317,10 @@
             this.pictureBox1.ErrorImage = global::Wyszukiwarka_Przepisów.Properties.Resources.Apka_Wyszukiwarka;
             this.pictureBox1.Image = global::Wyszukiwarka_Przepisów.Properties.Resources.Apka_Wyszukiwarka;
             this.pictureBox1.InitialImage = global::Wyszukiwarka_Przepisów.Properties.Resources.Apka_Wyszukiwarka;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 17);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(230, 118);
+            this.pictureBox1.Size = new System.Drawing.Size(153, 77);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -316,18 +330,20 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(262, 62);
+            this.panel1.Location = new System.Drawing.Point(175, 41);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(18, 609);
+            this.panel1.Size = new System.Drawing.Size(12, 395);
             this.panel1.TabIndex = 2;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(280, 656);
+            this.panel2.Location = new System.Drawing.Point(187, 426);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(941, 15);
+            this.panel2.Size = new System.Drawing.Size(627, 10);
             this.panel2.TabIndex = 3;
             // 
             // appInf
@@ -338,9 +354,8 @@
             this.appInf.Controls.Add(this.pictureBox2);
             this.appInf.Dock = System.Windows.Forms.DockStyle.Fill;
             this.appInf.Location = new System.Drawing.Point(0, 0);
-            this.appInf.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.appInf.Name = "appInf";
-            this.appInf.Size = new System.Drawing.Size(1221, 671);
+            this.appInf.Size = new System.Drawing.Size(814, 436);
             this.appInf.TabIndex = 4;
             this.appInf.Visible = false;
             // 
@@ -348,10 +363,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Bisque;
-            this.label1.Location = new System.Drawing.Point(388, 122);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(259, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(375, 400);
+            this.label1.Size = new System.Drawing.Size(256, 260);
             this.label1.TabIndex = 1;
             this.label1.Text = resources.GetString("label1.Text");
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -359,10 +373,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Wyszukiwarka_Przepisów.Properties.Resources.Meditation;
-            this.pictureBox2.Location = new System.Drawing.Point(-26, -331);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(-17, -215);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1500, 1169);
+            this.pictureBox2.Size = new System.Drawing.Size(1000, 760);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -375,18 +388,16 @@
             this.search.Controls.Add(this.textBox1);
             this.search.Dock = System.Windows.Forms.DockStyle.Fill;
             this.search.Location = new System.Drawing.Point(0, 0);
-            this.search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(1221, 671);
+            this.search.Size = new System.Drawing.Size(814, 436);
             this.search.TabIndex = 5;
             this.search.Visible = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(652, 346);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(435, 225);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 35);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -394,10 +405,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(411, 309);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox1.Location = new System.Drawing.Point(274, 201);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(604, 26);
+            this.textBox1.Size = new System.Drawing.Size(404, 20);
             this.textBox1.TabIndex = 0;
             // 
             // favorite
@@ -405,9 +415,8 @@
             this.favorite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.favorite.Dock = System.Windows.Forms.DockStyle.Fill;
             this.favorite.Location = new System.Drawing.Point(0, 0);
-            this.favorite.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.favorite.Name = "favorite";
-            this.favorite.Size = new System.Drawing.Size(1221, 671);
+            this.favorite.Size = new System.Drawing.Size(814, 436);
             this.favorite.TabIndex = 6;
             this.favorite.Visible = false;
             // 
@@ -420,9 +429,8 @@
             this.cookidoo.Controls.Add(this.pictureBox3);
             this.cookidoo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cookidoo.Location = new System.Drawing.Point(0, 0);
-            this.cookidoo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cookidoo.Name = "cookidoo";
-            this.cookidoo.Size = new System.Drawing.Size(1221, 671);
+            this.cookidoo.Size = new System.Drawing.Size(814, 436);
             this.cookidoo.TabIndex = 7;
             this.cookidoo.Visible = false;
             // 
@@ -433,10 +441,9 @@
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Cursor = System.Windows.Forms.Cursors.No;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(368, 148);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(245, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(762, 244);
+            this.label3.Size = new System.Drawing.Size(517, 167);
             this.label3.TabIndex = 1;
             this.label3.Text = resources.GetString("label3.Text");
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -444,10 +451,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Wyszukiwarka_Przepisów.Properties.Resources.cookidoo11;
-            this.pictureBox3.Location = new System.Drawing.Point(164, 460);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox3.Location = new System.Drawing.Point(109, 299);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1202, 242);
+            this.pictureBox3.Size = new System.Drawing.Size(801, 157);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -458,18 +464,18 @@
             this.contact.Controls.Add(this.label2);
             this.contact.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contact.Location = new System.Drawing.Point(0, 0);
-            this.contact.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contact.Name = "contact";
-            this.contact.Size = new System.Drawing.Size(1221, 671);
+            this.contact.Size = new System.Drawing.Size(814, 436);
             this.contact.TabIndex = 8;
             this.contact.Visible = false;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(510, 212);
+            this.label2.Location = new System.Drawing.Point(340, 138);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(478, 295);
+            this.label2.Size = new System.Drawing.Size(319, 192);
             this.label2.TabIndex = 0;
             this.label2.Text = "\r\nChętnie odpowiem na pytania.\r\nZachęcam do dzielenia się opiniami.\r\n\r\n\r\nZaprasza" +
     "m do kontaktu drogą e-mail:\r\n\r\nmartynabakula09@gmail.com\r\n";
@@ -480,17 +486,16 @@
             this.code.BackColor = System.Drawing.SystemColors.Info;
             this.code.Dock = System.Windows.Forms.DockStyle.Fill;
             this.code.Location = new System.Drawing.Point(0, 0);
-            this.code.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.code.Name = "code";
-            this.code.Size = new System.Drawing.Size(1221, 671);
+            this.code.Size = new System.Drawing.Size(814, 436);
             this.code.TabIndex = 9;
             this.code.Visible = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1221, 671);
+            this.ClientSize = new System.Drawing.Size(814, 436);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(panelTitleBar);
@@ -501,6 +506,7 @@
             this.Controls.Add(this.contact);
             this.Controls.Add(this.cookidoo);
             this.Controls.Add(this.favorite);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;

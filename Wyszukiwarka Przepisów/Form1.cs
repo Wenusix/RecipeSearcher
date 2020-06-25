@@ -1,9 +1,12 @@
 ﻿using FontAwesome.Sharp;
+using Newtonsoft.Json.Linq;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Net;
 using System.Runtime.InteropServices;
+using System.Text;
 using System.Windows.Forms;
 
 namespace Wyszukiwarka_Przepisów
@@ -113,7 +116,14 @@ namespace Wyszukiwarka_Przepisów
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            ActivateButton(iconButton1, RGBColors.color);
+            IblTitleChildForm.Text = "O aplikacji";
+            appInf.Visible = true;
+            search.Visible = false;
+            favorite.Visible = false;
+            cookidoo.Visible = false;
+            contact.Visible = false;
+            code.Visible = false;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -248,12 +258,50 @@ namespace Wyszukiwarka_Przepisów
                 FormBorderStyle = FormBorderStyle.Sizable;
         }
 
+        private void OpenRecipesList(List<Recipe> recipes)
+        {
+
+        }
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             using (WebClient wc = new WebClient())
             {
+                wc.Encoding = Encoding.UTF8;
                 var json = wc.DownloadString("http://192.168.1.19:8080/?word=" + textBox1.Text);
-                Debug.WriteLine(json);
+                JArray jObject = JArray.Parse(json);
+                List<Recipe> recipes = new List<Recipe>();
+                foreach (JObject i in jObject.Children())
+                {
+                    var recipeBuilder = Recipe.GetBuilder()
+                        .Id(i["id"].ToString())
+                        .Title(i["title"].ToString())
+                        .Portions(Convert.ToInt32(i["portions"].ToString()))
+                        .Rating(Convert.ToDouble(i["rating"].ToString()))
+                        .Difficulty(i["difficulty"].ToString())
+                        .TotalTime(Convert.ToInt32(i["totaltime"].ToString()));
+
+                    foreach(var j in ((JArray) i["ingredients"]).Children())
+                    {
+                        recipeBuilder.Ingredient(j.ToString());
+                    }
+
+                    recipes.Add(recipeBuilder.Build());
+                }
+                if(recipes.Count == 0)
+                { 
+                    MessageBox.Show("Nie znaleziono żadnego przepisu.");
+                    return;
+                }
+                search.Visible = false;
+                OpenRecipesList(recipes);
+
+
+
+
+
+
+                //  Debug.WriteLine(j);
             }
         }
     }

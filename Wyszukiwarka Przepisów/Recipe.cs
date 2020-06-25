@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -104,8 +106,15 @@ namespace Wyszukiwarka_Przepisów
                 return this;
             }
 
+            public Recipe Build()
+            {
+                return new Recipe(id, title, rating, ingredients, totaltime, portions, difficulty);
+            }
+
         }
     }
+
+
     enum Difficulty
     {
         EASY, MEDIUM, ADVANCED, OTHER
