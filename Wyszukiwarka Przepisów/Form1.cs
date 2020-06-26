@@ -155,6 +155,7 @@ namespace Wyszukiwarka_Przepisów
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
+            visibleSearchedItems(false);
             ActivateButton(sender, RGBColors.color);
             IblTitleChildForm.Text = "Wyszukiwarka";
             appInf.Visible = false;
@@ -350,6 +351,7 @@ namespace Wyszukiwarka_Przepisów
             portionLabel.Visible = visible;
             difficultyLabel.Visible = visible;
             totalTimeLabel.Visible = visible;
+            ingredientsLabel.Visible = visible;
           
         }
     }

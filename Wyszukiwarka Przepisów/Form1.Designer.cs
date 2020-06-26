@@ -684,6 +684,7 @@
             this.Controls.Add(this.contact);
             this.Controls.Add(this.cookidoo);
             this.Controls.Add(this.favorite);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
