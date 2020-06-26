@@ -271,6 +271,7 @@ namespace Wyszukiwarka_Przepisów
             listBox1.Items.Clear();
             using (WebClient wc = new WebClient())
             {
+                visibleSearchedItems(false);
                 wc.Encoding = Encoding.UTF8;
                 var json = wc.DownloadString("http://192.168.1.19:8080/?word=" + textBox1.Text);
                 JArray jObject = JArray.Parse(json);
