@@ -72,8 +72,9 @@
             this.contact = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.code = new System.Windows.Forms.Panel();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
             this.label6 = new System.Windows.Forms.Label();
+            this.iconButton8 = new FontAwesome.Sharp.IconButton();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             panelTitleBar = new System.Windows.Forms.Panel();
             panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
@@ -88,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.contact.SuspendLayout();
             this.code.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitleBar
@@ -97,11 +99,10 @@
             panelTitleBar.Controls.Add(this.IblTitleChildForm);
             panelTitleBar.Controls.Add(this.iconCurrentChildForm);
             panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            panelTitleBar.Location = new System.Drawing.Point(175, 0);
-            panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
+            panelTitleBar.Location = new System.Drawing.Point(262, 0);
             panelTitleBar.Name = "panelTitleBar";
             panelTitleBar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            panelTitleBar.Size = new System.Drawing.Size(645, 41);
+            panelTitleBar.Size = new System.Drawing.Size(968, 62);
             panelTitleBar.TabIndex = 1;
             panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -109,10 +110,9 @@
             // 
             this.IblTitleChildForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.IblTitleChildForm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.IblTitleChildForm.Location = new System.Drawing.Point(40, 9);
-            this.IblTitleChildForm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.IblTitleChildForm.Location = new System.Drawing.Point(60, 14);
             this.IblTitleChildForm.Name = "IblTitleChildForm";
-            this.IblTitleChildForm.Size = new System.Drawing.Size(80, 19);
+            this.IblTitleChildForm.Size = new System.Drawing.Size(120, 29);
             this.IblTitleChildForm.TabIndex = 1;
             this.IblTitleChildForm.Text = "O aplikacji";
             this.IblTitleChildForm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -123,11 +123,9 @@
             this.iconCurrentChildForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
             this.iconCurrentChildForm.IconColor = System.Drawing.SystemColors.ControlLightLight;
-            this.iconCurrentChildForm.IconSize = 21;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(15, 8);
-            this.iconCurrentChildForm.Margin = new System.Windows.Forms.Padding(2);
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(22, 12);
             this.iconCurrentChildForm.Name = "iconCurrentChildForm";
-            this.iconCurrentChildForm.Size = new System.Drawing.Size(21, 21);
+            this.iconCurrentChildForm.Size = new System.Drawing.Size(32, 32);
             this.iconCurrentChildForm.TabIndex = 0;
             this.iconCurrentChildForm.TabStop = false;
             // 
@@ -143,9 +141,8 @@
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(175, 440);
+            this.panelMenu.Size = new System.Drawing.Size(262, 677);
             this.panelMenu.TabIndex = 0;
             // 
             // iconButton7
@@ -160,11 +157,10 @@
             this.iconButton7.IconColor = System.Drawing.Color.White;
             this.iconButton7.IconSize = 25;
             this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton7.Location = new System.Drawing.Point(20, 390);
-            this.iconButton7.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton7.Location = new System.Drawing.Point(30, 600);
             this.iconButton7.Name = "iconButton7";
             this.iconButton7.Rotation = 0D;
-            this.iconButton7.Size = new System.Drawing.Size(133, 34);
+            this.iconButton7.Size = new System.Drawing.Size(200, 52);
             this.iconButton7.TabIndex = 7;
             this.iconButton7.Text = "Zamkniij";
             this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -184,11 +180,10 @@
             this.iconButton6.IconColor = System.Drawing.Color.White;
             this.iconButton6.IconSize = 25;
             this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton6.Location = new System.Drawing.Point(20, 260);
-            this.iconButton6.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton6.Location = new System.Drawing.Point(30, 400);
             this.iconButton6.Name = "iconButton6";
             this.iconButton6.Rotation = 0D;
-            this.iconButton6.Size = new System.Drawing.Size(133, 34);
+            this.iconButton6.Size = new System.Drawing.Size(200, 52);
             this.iconButton6.TabIndex = 6;
             this.iconButton6.Text = "Kontakt";
             this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -208,11 +203,10 @@
             this.iconButton5.IconColor = System.Drawing.Color.White;
             this.iconButton5.IconSize = 25;
             this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton5.Location = new System.Drawing.Point(20, 301);
-            this.iconButton5.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton5.Location = new System.Drawing.Point(30, 463);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Rotation = 0D;
-            this.iconButton5.Size = new System.Drawing.Size(133, 34);
+            this.iconButton5.Size = new System.Drawing.Size(200, 52);
             this.iconButton5.TabIndex = 5;
             this.iconButton5.Text = "Kod aplikacji";
             this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -232,11 +226,10 @@
             this.iconButton4.IconColor = System.Drawing.Color.White;
             this.iconButton4.IconSize = 25;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton4.Location = new System.Drawing.Point(20, 220);
-            this.iconButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton4.Location = new System.Drawing.Point(30, 338);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Rotation = 0D;
-            this.iconButton4.Size = new System.Drawing.Size(133, 34);
+            this.iconButton4.Size = new System.Drawing.Size(200, 52);
             this.iconButton4.TabIndex = 4;
             this.iconButton4.Text = "Cookidoo";
             this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -256,11 +249,10 @@
             this.iconButton2.IconColor = System.Drawing.Color.White;
             this.iconButton2.IconSize = 25;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton2.Location = new System.Drawing.Point(20, 182);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton2.Location = new System.Drawing.Point(30, 280);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Rotation = 0D;
-            this.iconButton2.Size = new System.Drawing.Size(133, 34);
+            this.iconButton2.Size = new System.Drawing.Size(200, 52);
             this.iconButton2.TabIndex = 2;
             this.iconButton2.Text = "Wyszukiwanie";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -280,12 +272,11 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconSize = 25;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton1.Location = new System.Drawing.Point(20, 142);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton1.Location = new System.Drawing.Point(30, 218);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(133, 34);
+            this.iconButton1.Size = new System.Drawing.Size(200, 52);
             this.iconButton1.TabIndex = 1;
             this.iconButton1.Text = "O aplikacji";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -298,9 +289,8 @@
             this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(2);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(175, 101);
+            this.panelLogo.Size = new System.Drawing.Size(262, 155);
             this.panelLogo.TabIndex = 0;
             // 
             // pictureBox1
@@ -309,10 +299,9 @@
             this.pictureBox1.ErrorImage = global::Wyszukiwarka_Przepisów.Properties.Resources.Apka_Wyszukiwarka;
             this.pictureBox1.Image = global::Wyszukiwarka_Przepisów.Properties.Resources.Apka_Wyszukiwarka;
             this.pictureBox1.InitialImage = global::Wyszukiwarka_Przepisów.Properties.Resources.Apka_Wyszukiwarka;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 17);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(153, 77);
+            this.pictureBox1.Size = new System.Drawing.Size(230, 118);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -321,20 +310,18 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(175, 41);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(262, 62);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(12, 399);
+            this.panel1.Size = new System.Drawing.Size(18, 615);
             this.panel1.TabIndex = 2;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(187, 430);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(280, 662);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(633, 10);
+            this.panel2.Size = new System.Drawing.Size(950, 15);
             this.panel2.TabIndex = 3;
             // 
             // appInf
@@ -345,8 +332,9 @@
             this.appInf.Controls.Add(this.pictureBox2);
             this.appInf.Dock = System.Windows.Forms.DockStyle.Fill;
             this.appInf.Location = new System.Drawing.Point(0, 0);
+            this.appInf.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.appInf.Name = "appInf";
-            this.appInf.Size = new System.Drawing.Size(820, 440);
+            this.appInf.Size = new System.Drawing.Size(1230, 677);
             this.appInf.TabIndex = 4;
             this.appInf.Visible = false;
             // 
@@ -354,9 +342,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Bisque;
-            this.label1.Location = new System.Drawing.Point(259, 79);
+            this.label1.Location = new System.Drawing.Point(388, 122);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(256, 260);
+            this.label1.Size = new System.Drawing.Size(375, 400);
             this.label1.TabIndex = 1;
             this.label1.Text = resources.GetString("label1.Text");
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -365,9 +354,10 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox2.Image = global::Wyszukiwarka_Przepisów.Properties.Resources.Meditation;
-            this.pictureBox2.Location = new System.Drawing.Point(-17, -215);
+            this.pictureBox2.Location = new System.Drawing.Point(-26, -331);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1000, 760);
+            this.pictureBox2.Size = new System.Drawing.Size(1500, 1169);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -375,6 +365,7 @@
             // search
             // 
             this.search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(163)))), ((int)(((byte)(26)))));
+            this.search.Controls.Add(this.pictureBox5);
             this.search.Controls.Add(this.pictureBox4);
             this.search.Controls.Add(this.label5);
             this.search.Controls.Add(this.titleItem);
@@ -395,15 +386,17 @@
             this.search.Controls.Add(this.textBox1);
             this.search.Dock = System.Windows.Forms.DockStyle.Fill;
             this.search.Location = new System.Drawing.Point(0, 0);
+            this.search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(820, 440);
+            this.search.Size = new System.Drawing.Size(1230, 677);
             this.search.TabIndex = 5;
             this.search.Visible = false;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Location = new System.Drawing.Point(472, 260);
+            this.pictureBox4.Location = new System.Drawing.Point(708, 400);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(181, 133);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -414,107 +407,120 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(198, 103);
+            this.label5.Location = new System.Drawing.Point(297, 158);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 13);
+            this.label5.Size = new System.Drawing.Size(58, 20);
             this.label5.TabIndex = 16;
             this.label5.Text = "Wyniki:";
             // 
             // titleItem
             // 
             this.titleItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.titleItem.Location = new System.Drawing.Point(579, 131);
+            this.titleItem.Location = new System.Drawing.Point(868, 202);
+            this.titleItem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.titleItem.Name = "titleItem";
-            this.titleItem.Size = new System.Drawing.Size(206, 32);
+            this.titleItem.Size = new System.Drawing.Size(309, 49);
             this.titleItem.TabIndex = 15;
             this.titleItem.Text = "{titleItem}";
             // 
             // difficultyItem
             // 
             this.difficultyItem.AutoSize = true;
-            this.difficultyItem.Location = new System.Drawing.Point(580, 228);
+            this.difficultyItem.Location = new System.Drawing.Point(870, 351);
+            this.difficultyItem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.difficultyItem.Name = "difficultyItem";
-            this.difficultyItem.Size = new System.Drawing.Size(73, 13);
+            this.difficultyItem.Size = new System.Drawing.Size(108, 20);
             this.difficultyItem.TabIndex = 14;
             this.difficultyItem.Text = "{difficultyItem}";
             // 
             // portionsItem
             // 
             this.portionsItem.AutoSize = true;
-            this.portionsItem.Location = new System.Drawing.Point(579, 209);
+            this.portionsItem.Location = new System.Drawing.Point(868, 322);
+            this.portionsItem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.portionsItem.Name = "portionsItem";
-            this.portionsItem.Size = new System.Drawing.Size(72, 13);
+            this.portionsItem.Size = new System.Drawing.Size(108, 20);
             this.portionsItem.TabIndex = 13;
             this.portionsItem.Text = "{portionsItem}";
             // 
             // ratingItem
             // 
             this.ratingItem.AutoSize = true;
-            this.ratingItem.Location = new System.Drawing.Point(579, 163);
+            this.ratingItem.Location = new System.Drawing.Point(868, 251);
+            this.ratingItem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ratingItem.Name = "ratingItem";
-            this.ratingItem.Size = new System.Drawing.Size(61, 13);
+            this.ratingItem.Size = new System.Drawing.Size(91, 20);
             this.ratingItem.TabIndex = 12;
             this.ratingItem.Text = "{ratingItem}";
             // 
             // totaltimeItem
             // 
             this.totaltimeItem.AutoSize = true;
-            this.totaltimeItem.Location = new System.Drawing.Point(579, 188);
+            this.totaltimeItem.Location = new System.Drawing.Point(868, 289);
+            this.totaltimeItem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totaltimeItem.Name = "totaltimeItem";
-            this.totaltimeItem.Size = new System.Drawing.Size(74, 13);
+            this.totaltimeItem.Size = new System.Drawing.Size(112, 20);
             this.totaltimeItem.TabIndex = 11;
             this.totaltimeItem.Text = "{totaltimeItem}";
             // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(201, 311);
+            this.listBox2.ItemHeight = 20;
+            this.listBox2.Location = new System.Drawing.Point(302, 478);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(253, 95);
+            this.listBox2.Size = new System.Drawing.Size(378, 144);
             this.listBox2.TabIndex = 10;
             // 
             // ingredientsLabel
             // 
             this.ingredientsLabel.AutoSize = true;
-            this.ingredientsLabel.Location = new System.Drawing.Point(198, 295);
+            this.ingredientsLabel.Location = new System.Drawing.Point(297, 454);
+            this.ingredientsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ingredientsLabel.Name = "ingredientsLabel";
-            this.ingredientsLabel.Size = new System.Drawing.Size(55, 13);
+            this.ingredientsLabel.Size = new System.Drawing.Size(77, 20);
             this.ingredientsLabel.TabIndex = 9;
             this.ingredientsLabel.Text = "Składniki:";
             // 
             // difficultyLabel
             // 
             this.difficultyLabel.AutoSize = true;
-            this.difficultyLabel.Location = new System.Drawing.Point(469, 230);
+            this.difficultyLabel.Location = new System.Drawing.Point(704, 354);
+            this.difficultyLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.difficultyLabel.Name = "difficultyLabel";
-            this.difficultyLabel.Size = new System.Drawing.Size(90, 13);
+            this.difficultyLabel.Size = new System.Drawing.Size(134, 20);
             this.difficultyLabel.TabIndex = 8;
             this.difficultyLabel.Text = "Poziom trudności:";
             // 
             // portionLabel
             // 
             this.portionLabel.AutoSize = true;
-            this.portionLabel.Location = new System.Drawing.Point(469, 209);
+            this.portionLabel.Location = new System.Drawing.Point(704, 322);
+            this.portionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.portionLabel.Name = "portionLabel";
-            this.portionLabel.Size = new System.Drawing.Size(40, 13);
+            this.portionLabel.Size = new System.Drawing.Size(57, 20);
             this.portionLabel.TabIndex = 7;
             this.portionLabel.Text = "Porcje:";
             // 
             // totalTimeLabel
             // 
             this.totalTimeLabel.AutoSize = true;
-            this.totalTimeLabel.Location = new System.Drawing.Point(469, 188);
+            this.totalTimeLabel.Location = new System.Drawing.Point(704, 289);
+            this.totalTimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totalTimeLabel.Name = "totalTimeLabel";
-            this.totalTimeLabel.Size = new System.Drawing.Size(104, 13);
+            this.totalTimeLabel.Size = new System.Drawing.Size(155, 20);
             this.totalTimeLabel.TabIndex = 6;
             this.totalTimeLabel.Text = "Czas przygotowania:";
             // 
             // ratingLabel
             // 
             this.ratingLabel.AutoSize = true;
-            this.ratingLabel.Location = new System.Drawing.Point(469, 165);
+            this.ratingLabel.Location = new System.Drawing.Point(704, 254);
+            this.ratingLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ratingLabel.Name = "ratingLabel";
-            this.ratingLabel.Size = new System.Drawing.Size(42, 13);
+            this.ratingLabel.Size = new System.Drawing.Size(60, 20);
             this.ratingLabel.TabIndex = 5;
             this.ratingLabel.Text = "Ocena:";
             // 
@@ -522,18 +528,21 @@
             // 
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.titleLabel.Location = new System.Drawing.Point(469, 131);
+            this.titleLabel.Location = new System.Drawing.Point(704, 202);
+            this.titleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(41, 13);
+            this.titleLabel.Size = new System.Drawing.Size(56, 20);
             this.titleLabel.TabIndex = 4;
             this.titleLabel.Text = "Tytuł:";
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(201, 119);
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(302, 183);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(253, 173);
+            this.listBox1.Size = new System.Drawing.Size(378, 264);
             this.listBox1.TabIndex = 3;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -541,17 +550,19 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(259, 53);
+            this.label4.Location = new System.Drawing.Point(388, 82);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 13);
+            this.label4.Size = new System.Drawing.Size(208, 20);
             this.label4.TabIndex = 2;
             this.label4.Text = "Wpisz produkt spożywczy:\r\n";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(687, 79);
+            this.button1.Location = new System.Drawing.Point(1030, 122);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(112, 35);
             this.button1.TabIndex = 1;
             this.button1.Text = "Szukaj..";
             this.button1.UseVisualStyleBackColor = true;
@@ -559,9 +570,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(262, 81);
+            this.textBox1.Location = new System.Drawing.Point(393, 125);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(404, 20);
+            this.textBox1.Size = new System.Drawing.Size(604, 26);
             this.textBox1.TabIndex = 0;
             // 
             // favorite
@@ -569,8 +581,9 @@
             this.favorite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.favorite.Dock = System.Windows.Forms.DockStyle.Fill;
             this.favorite.Location = new System.Drawing.Point(0, 0);
+            this.favorite.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.favorite.Name = "favorite";
-            this.favorite.Size = new System.Drawing.Size(820, 440);
+            this.favorite.Size = new System.Drawing.Size(1230, 677);
             this.favorite.TabIndex = 6;
             this.favorite.Visible = false;
             // 
@@ -583,8 +596,9 @@
             this.cookidoo.Controls.Add(this.pictureBox3);
             this.cookidoo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cookidoo.Location = new System.Drawing.Point(0, 0);
+            this.cookidoo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cookidoo.Name = "cookidoo";
-            this.cookidoo.Size = new System.Drawing.Size(820, 440);
+            this.cookidoo.Size = new System.Drawing.Size(1230, 677);
             this.cookidoo.TabIndex = 7;
             this.cookidoo.Visible = false;
             // 
@@ -595,9 +609,10 @@
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Cursor = System.Windows.Forms.Cursors.No;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(245, 96);
+            this.label3.Location = new System.Drawing.Point(368, 148);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(517, 167);
+            this.label3.Size = new System.Drawing.Size(762, 244);
             this.label3.TabIndex = 1;
             this.label3.Text = resources.GetString("label3.Text");
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -605,9 +620,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Wyszukiwarka_Przepisów.Properties.Resources.cookidoo11;
-            this.pictureBox3.Location = new System.Drawing.Point(109, 299);
+            this.pictureBox3.Location = new System.Drawing.Point(164, 460);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(801, 157);
+            this.pictureBox3.Size = new System.Drawing.Size(1202, 242);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -618,18 +634,18 @@
             this.contact.Controls.Add(this.label2);
             this.contact.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contact.Location = new System.Drawing.Point(0, 0);
+            this.contact.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contact.Name = "contact";
-            this.contact.Size = new System.Drawing.Size(820, 440);
+            this.contact.Size = new System.Drawing.Size(1230, 677);
             this.contact.TabIndex = 8;
             this.contact.Visible = false;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(340, 138);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(510, 212);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(319, 192);
+            this.label2.Size = new System.Drawing.Size(478, 295);
             this.label2.TabIndex = 0;
             this.label2.Text = "\r\nChętnie odpowiem na pytania.\r\nZachęcam do dzielenia się opiniami.\r\n\r\n\r\nZaprasza" +
     "m do kontaktu drogą e-mail:\r\n\r\nmartynabakula09@gmail.com\r\n";
@@ -642,10 +658,23 @@
             this.code.Controls.Add(this.iconButton8);
             this.code.Dock = System.Windows.Forms.DockStyle.Fill;
             this.code.Location = new System.Drawing.Point(0, 0);
+            this.code.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.code.Name = "code";
-            this.code.Size = new System.Drawing.Size(820, 440);
+            this.code.Size = new System.Drawing.Size(1230, 677);
             this.code.TabIndex = 9;
             this.code.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(486, 271);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(588, 64);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Zapraszam do zapoznania się kodu aplikacji, \r\nzamieszczonego na github:\r\n";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // iconButton8
             // 
@@ -657,43 +686,42 @@
             this.iconButton8.IconColor = System.Drawing.Color.Black;
             this.iconButton8.IconSize = 50;
             this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton8.Location = new System.Drawing.Point(393, 264);
+            this.iconButton8.Location = new System.Drawing.Point(590, 406);
+            this.iconButton8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.iconButton8.Name = "iconButton8";
             this.iconButton8.Rotation = 0D;
-            this.iconButton8.Size = new System.Drawing.Size(227, 62);
+            this.iconButton8.Size = new System.Drawing.Size(340, 95);
             this.iconButton8.TabIndex = 0;
             this.iconButton8.Text = "       Kod aplikacji\r\n";
             this.iconButton8.UseVisualStyleBackColor = false;
             this.iconButton8.Click += new System.EventHandler(this.iconButton8_Click);
             // 
-            // label6
+            // pictureBox5
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(324, 176);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(388, 48);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Zapraszam do zapoznania się kodu aplikacji, \r\nzamieszczonego na github:\r\n";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pictureBox5.Image = global::Wyszukiwarka_Przepisów.Properties.Resources.loading;
+            this.pictureBox5.Location = new System.Drawing.Point(281, 62);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(949, 603);
+            this.pictureBox5.TabIndex = 18;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Visible = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 440);
+            this.ClientSize = new System.Drawing.Size(1230, 677);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(panelTitleBar);
             this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.cookidoo);
             this.Controls.Add(this.search);
             this.Controls.Add(this.code);
             this.Controls.Add(this.appInf);
             this.Controls.Add(this.contact);
-            this.Controls.Add(this.cookidoo);
             this.Controls.Add(this.favorite);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
@@ -715,6 +743,7 @@
             this.contact.ResumeLayout(false);
             this.code.ResumeLayout(false);
             this.code.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -766,6 +795,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private FontAwesome.Sharp.IconButton iconButton8;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
 

@@ -159,8 +159,8 @@ namespace Wyszukiwarka_Przepisów
 
                 textBox1.Enabled = false;
                 button1.Enabled = false;
-                
 
+                pictureBox5.Visible = true;
                 wc.DownloadStringAsync(new Uri(url));
                 wc.DownloadStringCompleted += new DownloadStringCompletedEventHandler(wc_GetDataFromBackEnd);
                 
@@ -195,6 +195,7 @@ namespace Wyszukiwarka_Przepisów
             }
             textBox1.Enabled = true;
             button1.Enabled = true;
+            pictureBox5.Visible = false;
             if (recipes.Count == 0)
             {
                 MessageBox.Show("Nie znaleziono żadnego przepisu.");
@@ -210,6 +211,7 @@ namespace Wyszukiwarka_Przepisów
                 MessageBox.Show("Błąd z połączeniem.");
                 textBox1.Enabled = true;
                 button1.Enabled = true;
+                pictureBox5.Visible = false;
             }
 
         }
