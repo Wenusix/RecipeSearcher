@@ -19,6 +19,7 @@ namespace Wyszukiwarka_Przepisów
 
         private PanelManagingUtil managingUtil = PanelManagingUtil.getInstance();
         private Control[] panels;
+        private static readonly string API = "192.168.1.19:8080";
 
         public Form1()
         {
@@ -149,41 +150,68 @@ namespace Wyszukiwarka_Przepisów
                 return;
             }
             listBox1.Items.Clear();
+
             using (WebClient wc = new WebClient())
             {
                 visibleSearchedItems(false);
                 wc.Encoding = Encoding.UTF8;
-                var json = wc.DownloadString("http://192.168.1.19:8080/?word=" + textBox1.Text);
-                JArray jObject = JArray.Parse(json);
-                List<Recipe> recipes = new List<Recipe>();
-                foreach (JObject i in jObject.Children())
-                {
-                    var recipeBuilder = Recipe.GetBuilder()
-                        .Id(i["id"].ToString())
-                        .Title(i["title"].ToString())
-                        .Portions(Convert.ToInt32(i["portions"].ToString()))
-                        .Rating(Convert.ToDouble(i["rating"].ToString()))
-                        .Difficulty(i["difficulty"].ToString())
-                        .TotalTime(Convert.ToInt32(i["totaltime"].ToString()))
-                        .Image(i["link"].ToString());
+                string url = $"http://{API}/?word=" + textBox1.Text;
 
-                    foreach (var j in ((JArray)i["ingredients"]).Children())
-                    {
-                        recipeBuilder.Ingredient(j.ToString());
-                    }
+                textBox1.Enabled = false;
+                button1.Enabled = false;
+                
 
-                    recipes.Add(recipeBuilder.Build());
-                }
-                if (recipes.Count == 0)
-                {
-                    MessageBox.Show("Nie znaleziono żadnego przepisu.");
-                    return;
-                }
-                recipiesRepository.Clear();
-                recipiesRepository.SaveAll(recipes);
-                OpenRecipesList();
-                textBox1.Text = "";
+                wc.DownloadStringAsync(new Uri(url));
+                wc.DownloadStringCompleted += new DownloadStringCompletedEventHandler(wc_GetDataFromBackEnd);
+                
+               
             }
+        }
+
+        void wc_GetDataFromBackEnd(object sender, DownloadStringCompletedEventArgs e)
+        {
+        try
+        {
+            string json = e.Result;
+            JArray jObject = JArray.Parse(json);
+            List<Recipe> recipes = new List<Recipe>();
+            foreach (JObject i in jObject.Children())
+            {
+                var recipeBuilder = Recipe.GetBuilder()
+                    .Id(i["id"].ToString())
+                    .Title(i["title"].ToString())
+                    .Portions(Convert.ToInt32(i["portions"].ToString()))
+                    .Rating(Convert.ToDouble(i["rating"].ToString()))
+                    .Difficulty(i["difficulty"].ToString())
+                    .TotalTime(Convert.ToInt32(i["totaltime"].ToString()))
+                    .Image(i["link"].ToString());
+
+                foreach (var j in ((JArray)i["ingredients"]).Children())
+                {
+                    recipeBuilder.Ingredient(j.ToString());
+                }
+
+                recipes.Add(recipeBuilder.Build());
+            }
+            textBox1.Enabled = true;
+            button1.Enabled = true;
+            if (recipes.Count == 0)
+            {
+                MessageBox.Show("Nie znaleziono żadnego przepisu.");
+                return;
+            }
+            recipiesRepository.Clear();
+            recipiesRepository.SaveAll(recipes);
+            OpenRecipesList();
+            textBox1.Text = "";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Błąd z połączeniem.");
+                textBox1.Enabled = true;
+                button1.Enabled = true;
+            }
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
