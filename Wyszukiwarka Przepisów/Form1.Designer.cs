@@ -186,7 +186,7 @@
             this.iconButton6.IconColor = System.Drawing.Color.White;
             this.iconButton6.IconSize = 25;
             this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton6.Location = new System.Drawing.Point(20, 268);
+            this.iconButton6.Location = new System.Drawing.Point(20, 260);
             this.iconButton6.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton6.Name = "iconButton6";
             this.iconButton6.Rotation = 0D;
@@ -210,7 +210,7 @@
             this.iconButton5.IconColor = System.Drawing.Color.White;
             this.iconButton5.IconSize = 25;
             this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton5.Location = new System.Drawing.Point(20, 312);
+            this.iconButton5.Location = new System.Drawing.Point(20, 301);
             this.iconButton5.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Rotation = 0D;
@@ -234,7 +234,7 @@
             this.iconButton4.IconColor = System.Drawing.Color.White;
             this.iconButton4.IconSize = 25;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton4.Location = new System.Drawing.Point(20, 222);
+            this.iconButton4.Location = new System.Drawing.Point(20, 220);
             this.iconButton4.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Rotation = 0D;
@@ -282,7 +282,7 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconSize = 25;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton1.Location = new System.Drawing.Point(20, 138);
+            this.iconButton1.Location = new System.Drawing.Point(20, 142);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -406,7 +406,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Location = new System.Drawing.Point(533, 255);
+            this.pictureBox4.Location = new System.Drawing.Point(472, 260);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(181, 133);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -417,7 +417,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(198, 116);
+            this.label5.Location = new System.Drawing.Point(198, 103);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 16;
@@ -425,17 +425,17 @@
             // 
             // titleItem
             // 
-            this.titleItem.AutoSize = true;
-            this.titleItem.Location = new System.Drawing.Point(640, 119);
+            this.titleItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.titleItem.Location = new System.Drawing.Point(579, 131);
             this.titleItem.Name = "titleItem";
-            this.titleItem.Size = new System.Drawing.Size(51, 13);
+            this.titleItem.Size = new System.Drawing.Size(206, 32);
             this.titleItem.TabIndex = 15;
             this.titleItem.Text = "{titleItem}";
             // 
             // difficultyItem
             // 
             this.difficultyItem.AutoSize = true;
-            this.difficultyItem.Location = new System.Drawing.Point(641, 203);
+            this.difficultyItem.Location = new System.Drawing.Point(580, 228);
             this.difficultyItem.Name = "difficultyItem";
             this.difficultyItem.Size = new System.Drawing.Size(73, 13);
             this.difficultyItem.TabIndex = 14;
@@ -444,7 +444,7 @@
             // portionsItem
             // 
             this.portionsItem.AutoSize = true;
-            this.portionsItem.Location = new System.Drawing.Point(640, 184);
+            this.portionsItem.Location = new System.Drawing.Point(579, 209);
             this.portionsItem.Name = "portionsItem";
             this.portionsItem.Size = new System.Drawing.Size(72, 13);
             this.portionsItem.TabIndex = 13;
@@ -453,7 +453,7 @@
             // ratingItem
             // 
             this.ratingItem.AutoSize = true;
-            this.ratingItem.Location = new System.Drawing.Point(640, 138);
+            this.ratingItem.Location = new System.Drawing.Point(579, 163);
             this.ratingItem.Name = "ratingItem";
             this.ratingItem.Size = new System.Drawing.Size(61, 13);
             this.ratingItem.TabIndex = 12;
@@ -462,7 +462,7 @@
             // totaltimeItem
             // 
             this.totaltimeItem.AutoSize = true;
-            this.totaltimeItem.Location = new System.Drawing.Point(640, 163);
+            this.totaltimeItem.Location = new System.Drawing.Point(579, 188);
             this.totaltimeItem.Name = "totaltimeItem";
             this.totaltimeItem.Size = new System.Drawing.Size(74, 13);
             this.totaltimeItem.TabIndex = 11;
@@ -471,7 +471,7 @@
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(262, 313);
+            this.listBox2.Location = new System.Drawing.Point(201, 311);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(253, 95);
             this.listBox2.TabIndex = 10;
@@ -479,7 +479,7 @@
             // ingredientsLabel
             // 
             this.ingredientsLabel.AutoSize = true;
-            this.ingredientsLabel.Location = new System.Drawing.Point(198, 313);
+            this.ingredientsLabel.Location = new System.Drawing.Point(198, 295);
             this.ingredientsLabel.Name = "ingredientsLabel";
             this.ingredientsLabel.Size = new System.Drawing.Size(55, 13);
             this.ingredientsLabel.TabIndex = 9;
@@ -489,7 +489,7 @@
             // difficultyLabel
             // 
             this.difficultyLabel.AutoSize = true;
-            this.difficultyLabel.Location = new System.Drawing.Point(530, 203);
+            this.difficultyLabel.Location = new System.Drawing.Point(469, 230);
             this.difficultyLabel.Name = "difficultyLabel";
             this.difficultyLabel.Size = new System.Drawing.Size(90, 13);
             this.difficultyLabel.TabIndex = 8;
@@ -498,7 +498,7 @@
             // portionLabel
             // 
             this.portionLabel.AutoSize = true;
-            this.portionLabel.Location = new System.Drawing.Point(530, 184);
+            this.portionLabel.Location = new System.Drawing.Point(469, 209);
             this.portionLabel.Name = "portionLabel";
             this.portionLabel.Size = new System.Drawing.Size(40, 13);
             this.portionLabel.TabIndex = 7;
@@ -507,7 +507,7 @@
             // totalTimeLabel
             // 
             this.totalTimeLabel.AutoSize = true;
-            this.totalTimeLabel.Location = new System.Drawing.Point(530, 163);
+            this.totalTimeLabel.Location = new System.Drawing.Point(469, 188);
             this.totalTimeLabel.Name = "totalTimeLabel";
             this.totalTimeLabel.Size = new System.Drawing.Size(104, 13);
             this.totalTimeLabel.TabIndex = 6;
@@ -516,7 +516,7 @@
             // ratingLabel
             // 
             this.ratingLabel.AutoSize = true;
-            this.ratingLabel.Location = new System.Drawing.Point(530, 140);
+            this.ratingLabel.Location = new System.Drawing.Point(469, 165);
             this.ratingLabel.Name = "ratingLabel";
             this.ratingLabel.Size = new System.Drawing.Size(42, 13);
             this.ratingLabel.TabIndex = 5;
@@ -525,16 +525,17 @@
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
-            this.titleLabel.Location = new System.Drawing.Point(530, 119);
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.titleLabel.Location = new System.Drawing.Point(469, 131);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(35, 13);
+            this.titleLabel.Size = new System.Drawing.Size(41, 13);
             this.titleLabel.TabIndex = 4;
             this.titleLabel.Text = "Tytuł:";
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(262, 116);
+            this.listBox1.Location = new System.Drawing.Point(201, 119);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(253, 173);
             this.listBox1.TabIndex = 3;
@@ -689,12 +690,12 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(panelTitleBar);
             this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.search);
             this.Controls.Add(this.code);
             this.Controls.Add(this.appInf);
             this.Controls.Add(this.contact);
             this.Controls.Add(this.cookidoo);
             this.Controls.Add(this.favorite);
-            this.Controls.Add(this.search);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";

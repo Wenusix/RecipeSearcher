@@ -16,6 +16,10 @@ namespace Wyszukiwarka_Przepisów
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+        private static readonly Color color = Color.FromArgb(191, 36, 109);
+
+        private PanelManagingUtil managingUtil = PanelManagingUtil.getInstance();
+        private Control[] panels;
 
         public Form1()
         {
@@ -28,14 +32,11 @@ namespace Wyszukiwarka_Przepisów
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.panels = new Control[] { appInf, search, favorite, cookidoo, contact, code };
 
         }
 
-        private struct RGBColors
-        {
-            public static Color color = Color.FromArgb(191, 36, 109);
-
-        }
+  
 
         private void ActivateButton(object senderBtn, Color color)
         {
@@ -74,24 +75,7 @@ namespace Wyszukiwarka_Przepisów
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
-        private void OpenChildForm(Form childForm)
-        {
 
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close();
-            }
-            currentChildForm = childForm;
-
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            //appInfoPanel.Controls.Add(childForm);
-            // appInfoPanel.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-            IblTitleChildForm.Text = childForm.Text;
-        }
 
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -116,16 +100,16 @@ namespace Wyszukiwarka_Przepisów
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            ActivateButton(iconButton1, RGBColors.color);
-            IblTitleChildForm.Text = "O aplikacji";
-            appInf.Visible = true;
-            search.Visible = false;
-            favorite.Visible = false;
-            cookidoo.Visible = false;
-            contact.Visible = false;
-            code.Visible = false;
-            visibleSearchedItems(false);
+            ShowPanel("O aplikacji", appInf, iconButton1);
 
+        }
+
+        private void ShowPanel(string title, Control componentToSee, IconButton iconButton)
+        {
+            ActivateButton(iconButton, color);
+            IblTitleChildForm.Text = title;
+            managingUtil.ShowControlElement(panels, componentToSee);
+            visibleSearchedItems(false);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -140,65 +124,29 @@ namespace Wyszukiwarka_Przepisów
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color);
-            IblTitleChildForm.Text = "O aplikacji";
-            appInf.Visible = true;
-            search.Visible = false;
-            cookidoo.Visible = false;
-            contact.Visible = false;
-            code.Visible = false;
-
-
-
+            ShowPanel("O aplikacji", appInf, iconButton1);
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            visibleSearchedItems(false);
-            ActivateButton(sender, RGBColors.color);
-            IblTitleChildForm.Text = "Wyszukiwarka";
-            appInf.Visible = false;
-            search.Visible = true;
-            cookidoo.Visible = false;
-            contact.Visible = false;
-            code.Visible = false;
+            ShowPanel("Wyszukiwarka", search, iconButton2);
         }
 
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color);
-            IblTitleChildForm.Text = "Cookidoo";
-            appInf.Visible = false;
-            search.Visible = false;
-            cookidoo.Visible = true;
-            contact.Visible = false;
-            code.Visible = false;
+            ShowPanel("Cookido", cookidoo, iconButton4);
 
         }
 
 
         private void iconButton5_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color);
-            IblTitleChildForm.Text = "Kod aplikacji";
-
-            IblTitleChildForm.Text = "Kontakt";
-            appInf.Visible = false;
-            search.Visible = false;
-            cookidoo.Visible = false;
-            contact.Visible = false;
-            code.Visible = true;
+            ShowPanel("Kod aplikacji", code, iconButton5);
         }
         private void iconButton6_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color);
-            IblTitleChildForm.Text = "Kontakt";
-            appInf.Visible = false;
-            search.Visible = false;
-            cookidoo.Visible = false;
-            contact.Visible = true;
-            code.Visible = false;
+            ShowPanel("Kontakt", contact, iconButton6);
 
         }
 
@@ -250,6 +198,7 @@ namespace Wyszukiwarka_Przepisów
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            if (textBox1.Text == null || textBox1.Text.Equals("")) return;
             listBox1.Items.Clear();
             using (WebClient wc = new WebClient())
             {
@@ -284,6 +233,7 @@ namespace Wyszukiwarka_Przepisów
                 recipiesRepository.Clear();
                 recipiesRepository.SaveAll(recipes);
                 OpenRecipesList();
+                textBox1.Text = "";
 
 
 
@@ -308,7 +258,7 @@ namespace Wyszukiwarka_Przepisów
                 titleItem.Text = recipe.Title;
                 portionsItem.Text = recipe.Portions.ToString();
                 difficultyItem.Text = recipe.GetDifficultyText();
-                totaltimeItem.Text = recipe.TotalTime.ToString();
+                totaltimeItem.Text = recipe.GetTotalMinutesInText();
                 Debug.WriteLine(recipe.Image);
                 pictureBox4.Image = recipe.Image;
                 listBox2.Items.Clear();

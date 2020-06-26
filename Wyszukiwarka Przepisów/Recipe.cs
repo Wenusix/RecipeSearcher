@@ -65,6 +65,12 @@ namespace Wyszukiwarka_Przepisów
         {
             return recipeModelFactory(Id, Title);
         }
+
+        public string GetTotalMinutesInText()
+        {
+            return (TotalTime / 60).ToString() + " min.";
+
+        }
         
         public string GetRatingStars()
         {
