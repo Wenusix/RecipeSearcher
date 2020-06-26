@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -10,10 +11,8 @@ using System.Threading.Tasks;
 
 namespace Wyszukiwarka_Przepisów
 {
-    class Recipe
+    class Recipe : RecipeModel
     {
-        public string Id { get; private set; }
-        public string Title { get; private set; }
         public double Rating { get; private set; }
         public List<string> Ingredients { get; private set; }
         public int TotalTime { get; private set; }
@@ -41,10 +40,9 @@ namespace Wyszukiwarka_Przepisów
             return "https://cookidoo.pl/recipes/recipe/pl/" + Id;
         }
 
-        private Recipe(string id, string title, double rating, List<string> ingredients, int totalTime, int portions, string difficulty)
+        private Recipe(string id, string title, double rating, List<string> ingredients, int totalTime, int portions, string difficulty) : base(id, title)
         {
-            Id = id;
-            Title = title;
+            
             Rating = rating;
             Ingredients = ingredients;
             TotalTime = totalTime;
@@ -56,6 +54,22 @@ namespace Wyszukiwarka_Przepisów
                 case "advanced": Difficulty = Difficulty.ADVANCED; break;
                 default: Difficulty = Difficulty.OTHER; break;
             }
+        }
+
+        public string GetDifficultyText()
+        {
+            switch (Difficulty)
+            {
+                case Difficulty.EASY: return "Łatwy";
+                case Difficulty.MEDIUM: return "Średni";
+                case Difficulty.ADVANCED: return "Zaawansowany";
+                default: return "Brak";
+            }
+        }
+
+        public RecipeModel toModel()
+        {
+            return recipeModelFactory(Id, Title);
         }
 
 

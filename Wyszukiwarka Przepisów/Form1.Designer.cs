@@ -48,6 +48,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.search = new System.Windows.Forms.Panel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.favorite = new System.Windows.Forms.Panel();
@@ -57,6 +59,18 @@
             this.contact = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.code = new System.Windows.Forms.Panel();
+            this.titleLabel = new System.Windows.Forms.Label();
+            this.ratingLabel = new System.Windows.Forms.Label();
+            this.totalTimeLabel = new System.Windows.Forms.Label();
+            this.portionLabel = new System.Windows.Forms.Label();
+            this.difficultyLabel = new System.Windows.Forms.Label();
+            this.ingredientsLabel = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.totaltimeItem = new System.Windows.Forms.Label();
+            this.ratingItem = new System.Windows.Forms.Label();
+            this.portionsItem = new System.Windows.Forms.Label();
+            this.difficultyItem = new System.Windows.Forms.Label();
+            this.titleItem = new System.Windows.Forms.Label();
             panelTitleBar = new System.Windows.Forms.Panel();
             panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
@@ -79,10 +93,10 @@
             panelTitleBar.Controls.Add(this.iconCurrentChildForm);
             panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             panelTitleBar.Location = new System.Drawing.Point(175, 0);
-            panelTitleBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
             panelTitleBar.Name = "panelTitleBar";
             panelTitleBar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            panelTitleBar.Size = new System.Drawing.Size(639, 41);
+            panelTitleBar.Size = new System.Drawing.Size(645, 41);
             panelTitleBar.TabIndex = 1;
             panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -107,7 +121,7 @@
             this.iconCurrentChildForm.IconColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconCurrentChildForm.IconSize = 21;
             this.iconCurrentChildForm.Location = new System.Drawing.Point(15, 8);
-            this.iconCurrentChildForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iconCurrentChildForm.Margin = new System.Windows.Forms.Padding(2);
             this.iconCurrentChildForm.Name = "iconCurrentChildForm";
             this.iconCurrentChildForm.Size = new System.Drawing.Size(21, 21);
             this.iconCurrentChildForm.TabIndex = 0;
@@ -126,9 +140,9 @@
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(175, 436);
+            this.panelMenu.Size = new System.Drawing.Size(175, 440);
             this.panelMenu.TabIndex = 0;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -144,8 +158,8 @@
             this.iconButton7.IconColor = System.Drawing.Color.White;
             this.iconButton7.IconSize = 25;
             this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton7.Location = new System.Drawing.Point(22, 408);
-            this.iconButton7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iconButton7.Location = new System.Drawing.Point(20, 390);
+            this.iconButton7.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton7.Name = "iconButton7";
             this.iconButton7.Rotation = 0D;
             this.iconButton7.Size = new System.Drawing.Size(133, 34);
@@ -168,8 +182,8 @@
             this.iconButton6.IconColor = System.Drawing.Color.White;
             this.iconButton6.IconSize = 25;
             this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton6.Location = new System.Drawing.Point(22, 319);
-            this.iconButton6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iconButton6.Location = new System.Drawing.Point(20, 301);
+            this.iconButton6.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton6.Name = "iconButton6";
             this.iconButton6.Rotation = 0D;
             this.iconButton6.Size = new System.Drawing.Size(133, 34);
@@ -192,8 +206,8 @@
             this.iconButton5.IconColor = System.Drawing.Color.White;
             this.iconButton5.IconSize = 25;
             this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton5.Location = new System.Drawing.Point(22, 363);
-            this.iconButton5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iconButton5.Location = new System.Drawing.Point(20, 345);
+            this.iconButton5.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Rotation = 0D;
             this.iconButton5.Size = new System.Drawing.Size(133, 34);
@@ -216,8 +230,8 @@
             this.iconButton4.IconColor = System.Drawing.Color.White;
             this.iconButton4.IconSize = 25;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton4.Location = new System.Drawing.Point(22, 273);
-            this.iconButton4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iconButton4.Location = new System.Drawing.Point(20, 255);
+            this.iconButton4.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Rotation = 0D;
             this.iconButton4.Size = new System.Drawing.Size(133, 34);
@@ -240,8 +254,8 @@
             this.iconButton3.IconColor = System.Drawing.Color.White;
             this.iconButton3.IconSize = 25;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton3.Location = new System.Drawing.Point(22, 228);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iconButton3.Location = new System.Drawing.Point(20, 210);
+            this.iconButton3.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Rotation = 0D;
             this.iconButton3.Size = new System.Drawing.Size(133, 34);
@@ -264,8 +278,8 @@
             this.iconButton2.IconColor = System.Drawing.Color.White;
             this.iconButton2.IconSize = 25;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton2.Location = new System.Drawing.Point(22, 181);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iconButton2.Location = new System.Drawing.Point(20, 163);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Rotation = 0D;
             this.iconButton2.Size = new System.Drawing.Size(133, 34);
@@ -288,8 +302,8 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconSize = 25;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton1.Location = new System.Drawing.Point(22, 137);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iconButton1.Location = new System.Drawing.Point(20, 119);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.iconButton1.Rotation = 0D;
@@ -306,7 +320,7 @@
             this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(2);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(175, 101);
             this.panelLogo.TabIndex = 0;
@@ -318,7 +332,7 @@
             this.pictureBox1.Image = global::Wyszukiwarka_Przepisów.Properties.Resources.Apka_Wyszukiwarka;
             this.pictureBox1.InitialImage = global::Wyszukiwarka_Przepisów.Properties.Resources.Apka_Wyszukiwarka;
             this.pictureBox1.Location = new System.Drawing.Point(11, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(153, 77);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -331,19 +345,19 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(175, 41);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(12, 395);
+            this.panel1.Size = new System.Drawing.Size(12, 399);
             this.panel1.TabIndex = 2;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(187, 426);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(187, 430);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(627, 10);
+            this.panel2.Size = new System.Drawing.Size(633, 10);
             this.panel2.TabIndex = 3;
             // 
             // appInf
@@ -355,7 +369,7 @@
             this.appInf.Dock = System.Windows.Forms.DockStyle.Fill;
             this.appInf.Location = new System.Drawing.Point(0, 0);
             this.appInf.Name = "appInf";
-            this.appInf.Size = new System.Drawing.Size(814, 436);
+            this.appInf.Size = new System.Drawing.Size(820, 440);
             this.appInf.TabIndex = 4;
             this.appInf.Visible = false;
             // 
@@ -383,19 +397,52 @@
             // 
             // search
             // 
-            this.search.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(163)))), ((int)(((byte)(26)))));
+            this.search.Controls.Add(this.titleItem);
+            this.search.Controls.Add(this.difficultyItem);
+            this.search.Controls.Add(this.portionsItem);
+            this.search.Controls.Add(this.ratingItem);
+            this.search.Controls.Add(this.totaltimeItem);
+            this.search.Controls.Add(this.listBox2);
+            this.search.Controls.Add(this.ingredientsLabel);
+            this.search.Controls.Add(this.difficultyLabel);
+            this.search.Controls.Add(this.portionLabel);
+            this.search.Controls.Add(this.totalTimeLabel);
+            this.search.Controls.Add(this.ratingLabel);
+            this.search.Controls.Add(this.titleLabel);
+            this.search.Controls.Add(this.listBox1);
+            this.search.Controls.Add(this.label4);
             this.search.Controls.Add(this.button1);
             this.search.Controls.Add(this.textBox1);
             this.search.Dock = System.Windows.Forms.DockStyle.Fill;
             this.search.Location = new System.Drawing.Point(0, 0);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(814, 436);
+            this.search.Size = new System.Drawing.Size(820, 440);
             this.search.TabIndex = 5;
             this.search.Visible = false;
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(262, 210);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(253, 173);
+            this.listBox1.TabIndex = 3;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Location = new System.Drawing.Point(259, 110);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Wpisz produkt spożywczy:\r\n";
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(435, 225);
+            this.button1.Location = new System.Drawing.Point(440, 174);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -405,7 +452,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(274, 201);
+            this.textBox1.Location = new System.Drawing.Point(275, 138);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(404, 20);
             this.textBox1.TabIndex = 0;
@@ -416,7 +463,7 @@
             this.favorite.Dock = System.Windows.Forms.DockStyle.Fill;
             this.favorite.Location = new System.Drawing.Point(0, 0);
             this.favorite.Name = "favorite";
-            this.favorite.Size = new System.Drawing.Size(814, 436);
+            this.favorite.Size = new System.Drawing.Size(820, 440);
             this.favorite.TabIndex = 6;
             this.favorite.Visible = false;
             // 
@@ -430,7 +477,7 @@
             this.cookidoo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cookidoo.Location = new System.Drawing.Point(0, 0);
             this.cookidoo.Name = "cookidoo";
-            this.cookidoo.Size = new System.Drawing.Size(814, 436);
+            this.cookidoo.Size = new System.Drawing.Size(820, 440);
             this.cookidoo.TabIndex = 7;
             this.cookidoo.Visible = false;
             // 
@@ -465,7 +512,7 @@
             this.contact.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contact.Location = new System.Drawing.Point(0, 0);
             this.contact.Name = "contact";
-            this.contact.Size = new System.Drawing.Size(814, 436);
+            this.contact.Size = new System.Drawing.Size(820, 440);
             this.contact.TabIndex = 8;
             this.contact.Visible = false;
             // 
@@ -487,26 +534,135 @@
             this.code.Dock = System.Windows.Forms.DockStyle.Fill;
             this.code.Location = new System.Drawing.Point(0, 0);
             this.code.Name = "code";
-            this.code.Size = new System.Drawing.Size(814, 436);
+            this.code.Size = new System.Drawing.Size(820, 440);
             this.code.TabIndex = 9;
             this.code.Visible = false;
+            // 
+            // titleLabel
+            // 
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Location = new System.Drawing.Point(530, 210);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(35, 13);
+            this.titleLabel.TabIndex = 4;
+            this.titleLabel.Text = "Tytuł:";
+            // 
+            // ratingLabel
+            // 
+            this.ratingLabel.AutoSize = true;
+            this.ratingLabel.Location = new System.Drawing.Point(530, 231);
+            this.ratingLabel.Name = "ratingLabel";
+            this.ratingLabel.Size = new System.Drawing.Size(42, 13);
+            this.ratingLabel.TabIndex = 5;
+            this.ratingLabel.Text = "Ocena:";
+            // 
+            // totalTimeLabel
+            // 
+            this.totalTimeLabel.AutoSize = true;
+            this.totalTimeLabel.Location = new System.Drawing.Point(530, 250);
+            this.totalTimeLabel.Name = "totalTimeLabel";
+            this.totalTimeLabel.Size = new System.Drawing.Size(104, 13);
+            this.totalTimeLabel.TabIndex = 6;
+            this.totalTimeLabel.Text = "Czas przygotowania:";
+            // 
+            // portionLabel
+            // 
+            this.portionLabel.AutoSize = true;
+            this.portionLabel.Location = new System.Drawing.Point(530, 267);
+            this.portionLabel.Name = "portionLabel";
+            this.portionLabel.Size = new System.Drawing.Size(40, 13);
+            this.portionLabel.TabIndex = 7;
+            this.portionLabel.Text = "Porcje:";
+            // 
+            // difficultyLabel
+            // 
+            this.difficultyLabel.AutoSize = true;
+            this.difficultyLabel.Location = new System.Drawing.Point(530, 283);
+            this.difficultyLabel.Name = "difficultyLabel";
+            this.difficultyLabel.Size = new System.Drawing.Size(90, 13);
+            this.difficultyLabel.TabIndex = 8;
+            this.difficultyLabel.Text = "Poziom trudności:";
+            // 
+            // ingredientsLabel
+            // 
+            this.ingredientsLabel.AutoSize = true;
+            this.ingredientsLabel.Location = new System.Drawing.Point(530, 330);
+            this.ingredientsLabel.Name = "ingredientsLabel";
+            this.ingredientsLabel.Size = new System.Drawing.Size(55, 13);
+            this.ingredientsLabel.TabIndex = 9;
+            this.ingredientsLabel.Text = "Składniki:";
+            this.ingredientsLabel.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(591, 318);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(226, 95);
+            this.listBox2.TabIndex = 10;
+            // 
+            // totaltimeItem
+            // 
+            this.totaltimeItem.AutoSize = true;
+            this.totaltimeItem.Location = new System.Drawing.Point(640, 250);
+            this.totaltimeItem.Name = "totaltimeItem";
+            this.totaltimeItem.Size = new System.Drawing.Size(74, 13);
+            this.totaltimeItem.TabIndex = 11;
+            this.totaltimeItem.Text = "{totaltimeItem}";
+            // 
+            // ratingItem
+            // 
+            this.ratingItem.AutoSize = true;
+            this.ratingItem.Location = new System.Drawing.Point(640, 230);
+            this.ratingItem.Name = "ratingItem";
+            this.ratingItem.Size = new System.Drawing.Size(61, 13);
+            this.ratingItem.TabIndex = 12;
+            this.ratingItem.Text = "{ratingItem}";
+            // 
+            // portionsItem
+            // 
+            this.portionsItem.AutoSize = true;
+            this.portionsItem.Location = new System.Drawing.Point(640, 267);
+            this.portionsItem.Name = "portionsItem";
+            this.portionsItem.Size = new System.Drawing.Size(72, 13);
+            this.portionsItem.TabIndex = 13;
+            this.portionsItem.Text = "{portionsItem}";
+            // 
+            // difficultyItem
+            // 
+            this.difficultyItem.AutoSize = true;
+            this.difficultyItem.Location = new System.Drawing.Point(640, 283);
+            this.difficultyItem.Name = "difficultyItem";
+            this.difficultyItem.Size = new System.Drawing.Size(73, 13);
+            this.difficultyItem.TabIndex = 14;
+            this.difficultyItem.Text = "{difficultyItem}";
+            // 
+            // titleItem
+            // 
+            this.titleItem.AutoSize = true;
+            this.titleItem.Location = new System.Drawing.Point(640, 210);
+            this.titleItem.Name = "titleItem";
+            this.titleItem.Size = new System.Drawing.Size(51, 13);
+            this.titleItem.TabIndex = 15;
+            this.titleItem.Text = "{titleItem}";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 436);
+            this.ClientSize = new System.Drawing.Size(820, 440);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(panelTitleBar);
             this.Controls.Add(this.panelMenu);
-            this.Controls.Add(this.appInf);
             this.Controls.Add(this.search);
             this.Controls.Add(this.code);
             this.Controls.Add(this.contact);
             this.Controls.Add(this.cookidoo);
             this.Controls.Add(this.favorite);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.appInf);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
@@ -559,6 +715,20 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label ratingLabel;
+        private System.Windows.Forms.Label titleLabel;
+        private System.Windows.Forms.Label portionLabel;
+        private System.Windows.Forms.Label totalTimeLabel;
+        private System.Windows.Forms.Label difficultyLabel;
+        private System.Windows.Forms.Label ingredientsLabel;
+        private System.Windows.Forms.Label difficultyItem;
+        private System.Windows.Forms.Label portionsItem;
+        private System.Windows.Forms.Label ratingItem;
+        private System.Windows.Forms.Label totaltimeItem;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Label titleItem;
     }
 }
 

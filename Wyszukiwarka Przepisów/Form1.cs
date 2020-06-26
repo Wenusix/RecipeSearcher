@@ -252,16 +252,16 @@ namespace Wyszukiwarka_Przepisów
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            if (WindowState == FormWindowState.Maximized)
-                FormBorderStyle = FormBorderStyle.None;
-            else
-                FormBorderStyle = FormBorderStyle.Sizable;
+             FormBorderStyle = FormBorderStyle.None;
+    
         }
 
-        private void OpenRecipesList(List<Recipe> recipes)
+        private void OpenRecipesList()
         {
-
+            recipiesRepository.FindAll().ForEach(v => listBox1.Items.Add(v.toModel()));
         }
+
+        Repository<string, Recipe> recipiesRepository = RecipeRepository.GetRepository();
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -293,8 +293,9 @@ namespace Wyszukiwarka_Przepisów
                     MessageBox.Show("Nie znaleziono żadnego przepisu.");
                     return;
                 }
-                search.Visible = false;
-                OpenRecipesList(recipes);
+                recipiesRepository.Clear();
+                recipiesRepository.SaveAll(recipes);
+                OpenRecipesList();
 
 
 
@@ -302,6 +303,19 @@ namespace Wyszukiwarka_Przepisów
 
 
                 //  Debug.WriteLine(j);
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(listBox1.SelectedItem is RecipeModel) { 
+                RecipeModel model = (RecipeModel) listBox1.SelectedItem;
+                MessageBox.Show(model.toRecipe().Rating.ToString());
             }
         }
     }
