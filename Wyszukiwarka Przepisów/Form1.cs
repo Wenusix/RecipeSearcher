@@ -252,7 +252,7 @@ namespace Wyszukiwarka_Przepisów
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-             FormBorderStyle = FormBorderStyle.None;
+         
     
         }
 

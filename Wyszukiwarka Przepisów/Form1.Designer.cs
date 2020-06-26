@@ -48,6 +48,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.search = new System.Windows.Forms.Panel();
+            this.titleItem = new System.Windows.Forms.Label();
+            this.difficultyItem = new System.Windows.Forms.Label();
+            this.portionsItem = new System.Windows.Forms.Label();
+            this.ratingItem = new System.Windows.Forms.Label();
+            this.totaltimeItem = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.ingredientsLabel = new System.Windows.Forms.Label();
+            this.difficultyLabel = new System.Windows.Forms.Label();
+            this.portionLabel = new System.Windows.Forms.Label();
+            this.totalTimeLabel = new System.Windows.Forms.Label();
+            this.ratingLabel = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -59,18 +71,6 @@
             this.contact = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.code = new System.Windows.Forms.Panel();
-            this.titleLabel = new System.Windows.Forms.Label();
-            this.ratingLabel = new System.Windows.Forms.Label();
-            this.totalTimeLabel = new System.Windows.Forms.Label();
-            this.portionLabel = new System.Windows.Forms.Label();
-            this.difficultyLabel = new System.Windows.Forms.Label();
-            this.ingredientsLabel = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.totaltimeItem = new System.Windows.Forms.Label();
-            this.ratingItem = new System.Windows.Forms.Label();
-            this.portionsItem = new System.Windows.Forms.Label();
-            this.difficultyItem = new System.Windows.Forms.Label();
-            this.titleItem = new System.Windows.Forms.Label();
             panelTitleBar = new System.Windows.Forms.Panel();
             panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
@@ -386,6 +386,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox2.Image = global::Wyszukiwarka_Przepisów.Properties.Resources.Meditation;
             this.pictureBox2.Location = new System.Drawing.Point(-17, -215);
             this.pictureBox2.Name = "pictureBox2";
@@ -393,7 +394,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.UseWaitCursor = true;
             // 
             // search
             // 
@@ -420,6 +420,114 @@
             this.search.Size = new System.Drawing.Size(820, 440);
             this.search.TabIndex = 5;
             this.search.Visible = false;
+            // 
+            // titleItem
+            // 
+            this.titleItem.AutoSize = true;
+            this.titleItem.Location = new System.Drawing.Point(640, 210);
+            this.titleItem.Name = "titleItem";
+            this.titleItem.Size = new System.Drawing.Size(51, 13);
+            this.titleItem.TabIndex = 15;
+            this.titleItem.Text = "{titleItem}";
+            // 
+            // difficultyItem
+            // 
+            this.difficultyItem.AutoSize = true;
+            this.difficultyItem.Location = new System.Drawing.Point(640, 283);
+            this.difficultyItem.Name = "difficultyItem";
+            this.difficultyItem.Size = new System.Drawing.Size(73, 13);
+            this.difficultyItem.TabIndex = 14;
+            this.difficultyItem.Text = "{difficultyItem}";
+            // 
+            // portionsItem
+            // 
+            this.portionsItem.AutoSize = true;
+            this.portionsItem.Location = new System.Drawing.Point(640, 267);
+            this.portionsItem.Name = "portionsItem";
+            this.portionsItem.Size = new System.Drawing.Size(72, 13);
+            this.portionsItem.TabIndex = 13;
+            this.portionsItem.Text = "{portionsItem}";
+            // 
+            // ratingItem
+            // 
+            this.ratingItem.AutoSize = true;
+            this.ratingItem.Location = new System.Drawing.Point(640, 230);
+            this.ratingItem.Name = "ratingItem";
+            this.ratingItem.Size = new System.Drawing.Size(61, 13);
+            this.ratingItem.TabIndex = 12;
+            this.ratingItem.Text = "{ratingItem}";
+            // 
+            // totaltimeItem
+            // 
+            this.totaltimeItem.AutoSize = true;
+            this.totaltimeItem.Location = new System.Drawing.Point(640, 250);
+            this.totaltimeItem.Name = "totaltimeItem";
+            this.totaltimeItem.Size = new System.Drawing.Size(74, 13);
+            this.totaltimeItem.TabIndex = 11;
+            this.totaltimeItem.Text = "{totaltimeItem}";
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(591, 318);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(226, 95);
+            this.listBox2.TabIndex = 10;
+            // 
+            // ingredientsLabel
+            // 
+            this.ingredientsLabel.AutoSize = true;
+            this.ingredientsLabel.Location = new System.Drawing.Point(530, 330);
+            this.ingredientsLabel.Name = "ingredientsLabel";
+            this.ingredientsLabel.Size = new System.Drawing.Size(55, 13);
+            this.ingredientsLabel.TabIndex = 9;
+            this.ingredientsLabel.Text = "Składniki:";
+            this.ingredientsLabel.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // difficultyLabel
+            // 
+            this.difficultyLabel.AutoSize = true;
+            this.difficultyLabel.Location = new System.Drawing.Point(530, 283);
+            this.difficultyLabel.Name = "difficultyLabel";
+            this.difficultyLabel.Size = new System.Drawing.Size(90, 13);
+            this.difficultyLabel.TabIndex = 8;
+            this.difficultyLabel.Text = "Poziom trudności:";
+            // 
+            // portionLabel
+            // 
+            this.portionLabel.AutoSize = true;
+            this.portionLabel.Location = new System.Drawing.Point(530, 267);
+            this.portionLabel.Name = "portionLabel";
+            this.portionLabel.Size = new System.Drawing.Size(40, 13);
+            this.portionLabel.TabIndex = 7;
+            this.portionLabel.Text = "Porcje:";
+            // 
+            // totalTimeLabel
+            // 
+            this.totalTimeLabel.AutoSize = true;
+            this.totalTimeLabel.Location = new System.Drawing.Point(530, 250);
+            this.totalTimeLabel.Name = "totalTimeLabel";
+            this.totalTimeLabel.Size = new System.Drawing.Size(104, 13);
+            this.totalTimeLabel.TabIndex = 6;
+            this.totalTimeLabel.Text = "Czas przygotowania:";
+            // 
+            // ratingLabel
+            // 
+            this.ratingLabel.AutoSize = true;
+            this.ratingLabel.Location = new System.Drawing.Point(530, 231);
+            this.ratingLabel.Name = "ratingLabel";
+            this.ratingLabel.Size = new System.Drawing.Size(42, 13);
+            this.ratingLabel.TabIndex = 5;
+            this.ratingLabel.Text = "Ocena:";
+            // 
+            // titleLabel
+            // 
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Location = new System.Drawing.Point(530, 210);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(35, 13);
+            this.titleLabel.TabIndex = 4;
+            this.titleLabel.Text = "Tytuł:";
             // 
             // listBox1
             // 
@@ -538,114 +646,6 @@
             this.code.TabIndex = 9;
             this.code.Visible = false;
             // 
-            // titleLabel
-            // 
-            this.titleLabel.AutoSize = true;
-            this.titleLabel.Location = new System.Drawing.Point(530, 210);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(35, 13);
-            this.titleLabel.TabIndex = 4;
-            this.titleLabel.Text = "Tytuł:";
-            // 
-            // ratingLabel
-            // 
-            this.ratingLabel.AutoSize = true;
-            this.ratingLabel.Location = new System.Drawing.Point(530, 231);
-            this.ratingLabel.Name = "ratingLabel";
-            this.ratingLabel.Size = new System.Drawing.Size(42, 13);
-            this.ratingLabel.TabIndex = 5;
-            this.ratingLabel.Text = "Ocena:";
-            // 
-            // totalTimeLabel
-            // 
-            this.totalTimeLabel.AutoSize = true;
-            this.totalTimeLabel.Location = new System.Drawing.Point(530, 250);
-            this.totalTimeLabel.Name = "totalTimeLabel";
-            this.totalTimeLabel.Size = new System.Drawing.Size(104, 13);
-            this.totalTimeLabel.TabIndex = 6;
-            this.totalTimeLabel.Text = "Czas przygotowania:";
-            // 
-            // portionLabel
-            // 
-            this.portionLabel.AutoSize = true;
-            this.portionLabel.Location = new System.Drawing.Point(530, 267);
-            this.portionLabel.Name = "portionLabel";
-            this.portionLabel.Size = new System.Drawing.Size(40, 13);
-            this.portionLabel.TabIndex = 7;
-            this.portionLabel.Text = "Porcje:";
-            // 
-            // difficultyLabel
-            // 
-            this.difficultyLabel.AutoSize = true;
-            this.difficultyLabel.Location = new System.Drawing.Point(530, 283);
-            this.difficultyLabel.Name = "difficultyLabel";
-            this.difficultyLabel.Size = new System.Drawing.Size(90, 13);
-            this.difficultyLabel.TabIndex = 8;
-            this.difficultyLabel.Text = "Poziom trudności:";
-            // 
-            // ingredientsLabel
-            // 
-            this.ingredientsLabel.AutoSize = true;
-            this.ingredientsLabel.Location = new System.Drawing.Point(530, 330);
-            this.ingredientsLabel.Name = "ingredientsLabel";
-            this.ingredientsLabel.Size = new System.Drawing.Size(55, 13);
-            this.ingredientsLabel.TabIndex = 9;
-            this.ingredientsLabel.Text = "Składniki:";
-            this.ingredientsLabel.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(591, 318);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(226, 95);
-            this.listBox2.TabIndex = 10;
-            // 
-            // totaltimeItem
-            // 
-            this.totaltimeItem.AutoSize = true;
-            this.totaltimeItem.Location = new System.Drawing.Point(640, 250);
-            this.totaltimeItem.Name = "totaltimeItem";
-            this.totaltimeItem.Size = new System.Drawing.Size(74, 13);
-            this.totaltimeItem.TabIndex = 11;
-            this.totaltimeItem.Text = "{totaltimeItem}";
-            // 
-            // ratingItem
-            // 
-            this.ratingItem.AutoSize = true;
-            this.ratingItem.Location = new System.Drawing.Point(640, 230);
-            this.ratingItem.Name = "ratingItem";
-            this.ratingItem.Size = new System.Drawing.Size(61, 13);
-            this.ratingItem.TabIndex = 12;
-            this.ratingItem.Text = "{ratingItem}";
-            // 
-            // portionsItem
-            // 
-            this.portionsItem.AutoSize = true;
-            this.portionsItem.Location = new System.Drawing.Point(640, 267);
-            this.portionsItem.Name = "portionsItem";
-            this.portionsItem.Size = new System.Drawing.Size(72, 13);
-            this.portionsItem.TabIndex = 13;
-            this.portionsItem.Text = "{portionsItem}";
-            // 
-            // difficultyItem
-            // 
-            this.difficultyItem.AutoSize = true;
-            this.difficultyItem.Location = new System.Drawing.Point(640, 283);
-            this.difficultyItem.Name = "difficultyItem";
-            this.difficultyItem.Size = new System.Drawing.Size(73, 13);
-            this.difficultyItem.TabIndex = 14;
-            this.difficultyItem.Text = "{difficultyItem}";
-            // 
-            // titleItem
-            // 
-            this.titleItem.AutoSize = true;
-            this.titleItem.Location = new System.Drawing.Point(640, 210);
-            this.titleItem.Name = "titleItem";
-            this.titleItem.Size = new System.Drawing.Size(51, 13);
-            this.titleItem.TabIndex = 15;
-            this.titleItem.Text = "{titleItem}";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -655,12 +655,12 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(panelTitleBar);
             this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.appInf);
             this.Controls.Add(this.search);
             this.Controls.Add(this.code);
             this.Controls.Add(this.contact);
             this.Controls.Add(this.cookidoo);
             this.Controls.Add(this.favorite);
-            this.Controls.Add(this.appInf);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
