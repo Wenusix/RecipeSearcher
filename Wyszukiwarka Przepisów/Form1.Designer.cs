@@ -37,7 +37,6 @@
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -73,6 +72,8 @@
             this.contact = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.code = new System.Windows.Forms.Panel();
+            this.iconButton8 = new FontAwesome.Sharp.IconButton();
+            this.label6 = new System.Windows.Forms.Label();
             panelTitleBar = new System.Windows.Forms.Panel();
             panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
@@ -86,6 +87,7 @@
             this.cookidoo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.contact.SuspendLayout();
+            this.code.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTitleBar
@@ -137,7 +139,6 @@
             this.panelMenu.Controls.Add(this.iconButton6);
             this.panelMenu.Controls.Add(this.iconButton5);
             this.panelMenu.Controls.Add(this.iconButton4);
-            this.panelMenu.Controls.Add(this.iconButton3);
             this.panelMenu.Controls.Add(this.iconButton2);
             this.panelMenu.Controls.Add(this.iconButton1);
             this.panelMenu.Controls.Add(this.panelLogo);
@@ -185,7 +186,7 @@
             this.iconButton6.IconColor = System.Drawing.Color.White;
             this.iconButton6.IconSize = 25;
             this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton6.Location = new System.Drawing.Point(20, 301);
+            this.iconButton6.Location = new System.Drawing.Point(20, 268);
             this.iconButton6.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton6.Name = "iconButton6";
             this.iconButton6.Rotation = 0D;
@@ -209,7 +210,7 @@
             this.iconButton5.IconColor = System.Drawing.Color.White;
             this.iconButton5.IconSize = 25;
             this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton5.Location = new System.Drawing.Point(20, 345);
+            this.iconButton5.Location = new System.Drawing.Point(20, 312);
             this.iconButton5.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Rotation = 0D;
@@ -233,7 +234,7 @@
             this.iconButton4.IconColor = System.Drawing.Color.White;
             this.iconButton4.IconSize = 25;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton4.Location = new System.Drawing.Point(20, 255);
+            this.iconButton4.Location = new System.Drawing.Point(20, 222);
             this.iconButton4.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Rotation = 0D;
@@ -244,30 +245,6 @@
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = false;
             this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.iconButton3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Star;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconSize = 25;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton3.Location = new System.Drawing.Point(20, 210);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Rotation = 0D;
-            this.iconButton3.Size = new System.Drawing.Size(133, 34);
-            this.iconButton3.TabIndex = 3;
-            this.iconButton3.Text = "Ulubione";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = false;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // iconButton2
             // 
@@ -281,7 +258,7 @@
             this.iconButton2.IconColor = System.Drawing.Color.White;
             this.iconButton2.IconSize = 25;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton2.Location = new System.Drawing.Point(20, 163);
+            this.iconButton2.Location = new System.Drawing.Point(20, 182);
             this.iconButton2.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Rotation = 0D;
@@ -305,7 +282,7 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconSize = 25;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton1.Location = new System.Drawing.Point(20, 119);
+            this.iconButton1.Location = new System.Drawing.Point(20, 138);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -428,12 +405,14 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Location = new System.Drawing.Point(533, 255);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(181, 133);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label5
             // 
@@ -661,13 +640,45 @@
             // 
             // code
             // 
-            this.code.BackColor = System.Drawing.SystemColors.Info;
+            this.code.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(163)))), ((int)(((byte)(26)))));
+            this.code.Controls.Add(this.label6);
+            this.code.Controls.Add(this.iconButton8);
             this.code.Dock = System.Windows.Forms.DockStyle.Fill;
             this.code.Location = new System.Drawing.Point(0, 0);
             this.code.Name = "code";
             this.code.Size = new System.Drawing.Size(820, 440);
             this.code.TabIndex = 9;
             this.code.Visible = false;
+            // 
+            // iconButton8
+            // 
+            this.iconButton8.BackColor = System.Drawing.Color.White;
+            this.iconButton8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton8.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.GithubSquare;
+            this.iconButton8.IconColor = System.Drawing.Color.Black;
+            this.iconButton8.IconSize = 50;
+            this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton8.Location = new System.Drawing.Point(393, 264);
+            this.iconButton8.Name = "iconButton8";
+            this.iconButton8.Rotation = 0D;
+            this.iconButton8.Size = new System.Drawing.Size(227, 62);
+            this.iconButton8.TabIndex = 0;
+            this.iconButton8.Text = "       Kod aplikacji\r\n";
+            this.iconButton8.UseVisualStyleBackColor = false;
+            this.iconButton8.Click += new System.EventHandler(this.iconButton8_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(324, 176);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(388, 48);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Zapraszam do zapoznania się kodu aplikacji, \r\nzamieszczonego na github:\r\n";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -678,12 +689,12 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(panelTitleBar);
             this.Controls.Add(this.panelMenu);
-            this.Controls.Add(this.search);
-            this.Controls.Add(this.appInf);
             this.Controls.Add(this.code);
+            this.Controls.Add(this.appInf);
             this.Controls.Add(this.contact);
             this.Controls.Add(this.cookidoo);
             this.Controls.Add(this.favorite);
+            this.Controls.Add(this.search);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
@@ -705,6 +716,8 @@
             this.cookidoo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.contact.ResumeLayout(false);
+            this.code.ResumeLayout(false);
+            this.code.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -718,7 +731,6 @@
         private FontAwesome.Sharp.IconButton iconButton6;
         private FontAwesome.Sharp.IconButton iconButton5;
         private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
@@ -755,6 +767,8 @@
         private System.Windows.Forms.Label titleItem;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private FontAwesome.Sharp.IconButton iconButton8;
     }
 }
 

@@ -26,14 +26,10 @@ namespace Wyszukiwarka_Przepisów
             return new RecipeBuilder();
         }
 
-        public string GetLink()
-        {
-            return "https://cookidoo.pl/recipes/recipe/pl/" + Id;
-        }
+  
 
         private Recipe(string id, string title, double rating, List<string> ingredients, int totalTime, int portions, string difficulty, string image) : base(id, title)
         {
-            
             Rating = rating;
             Ingredients = ingredients;
             TotalTime = totalTime;

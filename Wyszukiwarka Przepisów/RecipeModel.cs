@@ -23,6 +23,11 @@ namespace Wyszukiwarka_Przepisów
             return new RecipeModel(id, title);
         }
 
+        public string GetLink()
+        {
+            return "https://cookidoo.pl/recipes/recipe/pl/" + Id;
+        }
+
         public Recipe toRecipe()
         {
             Debug.WriteLine(RecipeRepository.GetRepository().Count());

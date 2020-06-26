@@ -144,7 +144,6 @@ namespace Wyszukiwarka_Przepisów
             IblTitleChildForm.Text = "O aplikacji";
             appInf.Visible = true;
             search.Visible = false;
-            favorite.Visible = false;
             cookidoo.Visible = false;
             contact.Visible = false;
             code.Visible = false;
@@ -160,25 +159,11 @@ namespace Wyszukiwarka_Przepisów
             IblTitleChildForm.Text = "Wyszukiwarka";
             appInf.Visible = false;
             search.Visible = true;
-            favorite.Visible = false;
             cookidoo.Visible = false;
             contact.Visible = false;
             code.Visible = false;
         }
 
-
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color);
-            IblTitleChildForm.Text = "Ulubione";
-            appInf.Visible = false;
-            search.Visible = false;
-            favorite.Visible = true;
-            cookidoo.Visible = false;
-            contact.Visible = false;
-            code.Visible = false;
-
-        }
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
@@ -186,7 +171,6 @@ namespace Wyszukiwarka_Przepisów
             IblTitleChildForm.Text = "Cookidoo";
             appInf.Visible = false;
             search.Visible = false;
-            favorite.Visible = false;
             cookidoo.Visible = true;
             contact.Visible = false;
             code.Visible = false;
@@ -202,7 +186,6 @@ namespace Wyszukiwarka_Przepisów
             IblTitleChildForm.Text = "Kontakt";
             appInf.Visible = false;
             search.Visible = false;
-            favorite.Visible = false;
             cookidoo.Visible = false;
             contact.Visible = false;
             code.Visible = true;
@@ -213,7 +196,6 @@ namespace Wyszukiwarka_Przepisów
             IblTitleChildForm.Text = "Kontakt";
             appInf.Visible = false;
             search.Visible = false;
-            favorite.Visible = false;
             cookidoo.Visible = false;
             contact.Visible = true;
             code.Visible = false;
@@ -354,6 +336,19 @@ namespace Wyszukiwarka_Przepisów
             totalTimeLabel.Visible = visible;
             ingredientsLabel.Visible = visible;
           
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if(listBox1!=null)
+                System.Diagnostics.Process.Start(((RecipeModel)listBox1.SelectedItem).GetLink());
+        }
+
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Wenusix/RecipeSeacher");
+
+
         }
     }
 }
