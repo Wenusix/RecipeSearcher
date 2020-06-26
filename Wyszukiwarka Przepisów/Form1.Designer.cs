@@ -116,7 +116,6 @@
             this.IblTitleChildForm.TabIndex = 1;
             this.IblTitleChildForm.Text = "O aplikacji";
             this.IblTitleChildForm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.IblTitleChildForm.Click += new System.EventHandler(this.IblTitleChildForm_Click);
             // 
             // iconCurrentChildForm
             // 
@@ -148,7 +147,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(175, 440);
             this.panelMenu.TabIndex = 0;
-            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // iconButton7
             // 
@@ -318,7 +316,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel1
             // 
@@ -484,7 +481,6 @@
             this.ingredientsLabel.Size = new System.Drawing.Size(55, 13);
             this.ingredientsLabel.TabIndex = 9;
             this.ingredientsLabel.Text = "Składniki:";
-            this.ingredientsLabel.Click += new System.EventHandler(this.label5_Click);
             // 
             // difficultyLabel
             // 

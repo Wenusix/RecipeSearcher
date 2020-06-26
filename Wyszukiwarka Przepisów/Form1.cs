@@ -15,7 +15,6 @@ namespace Wyszukiwarka_Przepisów
     {
         private IconButton currentBtn;
         private Panel leftBorderBtn;
-        private Form currentChildForm;
         private static readonly Color color = Color.FromArgb(191, 36, 109);
 
         private PanelManagingUtil managingUtil = PanelManagingUtil.getInstance();
@@ -32,7 +31,7 @@ namespace Wyszukiwarka_Przepisów
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            this.panels = new Control[] { appInf, search, favorite, cookidoo, contact, code };
+            panels = new Control[] { appInf, search, favorite, cookidoo, contact, code };
 
         }
 
@@ -76,28 +75,6 @@ namespace Wyszukiwarka_Przepisów
             }
         }
 
-
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Reset1();
-        }
-        private void Reset1()
-        {
-            DisableButton();
-            leftBorderBtn.Visible = false;
-            iconCurrentChildForm.IconChar = IconChar.InfoCircle;
-            iconCurrentChildForm.IconColor = Color.MediumPurple;
-            // appInfoPanel.Text = "InfoCircle";
-        }
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close();
-            }
-            Reset1();
-        }
         private void Form1_Load(object sender, EventArgs e)
         {
             ShowPanel("O aplikacji", appInf, iconButton1);
@@ -112,34 +89,20 @@ namespace Wyszukiwarka_Przepisów
             visibleSearchedItems(false);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
             ShowPanel("O aplikacji", appInf, iconButton1);
         }
-
         private void iconButton2_Click(object sender, EventArgs e)
         {
             ShowPanel("Wyszukiwarka", search, iconButton2);
         }
 
-
         private void iconButton4_Click(object sender, EventArgs e)
         {
             ShowPanel("Cookido", cookidoo, iconButton4);
-
         }
-
-
         private void iconButton5_Click(object sender, EventArgs e)
         {
             ShowPanel("Kod aplikacji", code, iconButton5);
@@ -147,7 +110,6 @@ namespace Wyszukiwarka_Przepisów
         private void iconButton6_Click(object sender, EventArgs e)
         {
             ShowPanel("Kontakt", contact, iconButton6);
-
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -158,35 +120,13 @@ namespace Wyszukiwarka_Przepisów
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            SendMessage(Handle, 0x112, 0xf012, 0);
 
         }
 
         private void iconButton7_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void IblTitleChildForm_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void btnMaximize_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-                WindowState = FormWindowState.Maximized;
-            else
-                WindowState = FormWindowState.Normal;
-        }
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void Form1_Resize(object sender, EventArgs e)
-        {
-         
-           
         }
 
         private void OpenRecipesList()
@@ -198,7 +138,16 @@ namespace Wyszukiwarka_Przepisów
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (textBox1.Text == null || textBox1.Text.Equals("")) return;
+            Search();
+        }
+
+        public void Search()
+        {
+            if (textBox1.Text == null || textBox1.Text.Equals(""))
+            {
+                MessageBox.Show("Pole nie może być puste.");
+                return;
+            }
             listBox1.Items.Clear();
             using (WebClient wc = new WebClient())
             {
@@ -218,15 +167,15 @@ namespace Wyszukiwarka_Przepisów
                         .TotalTime(Convert.ToInt32(i["totaltime"].ToString()))
                         .Image(i["link"].ToString());
 
-                    foreach(var j in ((JArray) i["ingredients"]).Children())
+                    foreach (var j in ((JArray)i["ingredients"]).Children())
                     {
                         recipeBuilder.Ingredient(j.ToString());
                     }
 
                     recipes.Add(recipeBuilder.Build());
                 }
-                if(recipes.Count == 0)
-                { 
+                if (recipes.Count == 0)
+                {
                     MessageBox.Show("Nie znaleziono żadnego przepisu.");
                     return;
                 }
@@ -234,32 +183,19 @@ namespace Wyszukiwarka_Przepisów
                 recipiesRepository.SaveAll(recipes);
                 OpenRecipesList();
                 textBox1.Text = "";
-
-
-
-
-
-
-                //  Debug.WriteLine(j);
             }
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(listBox1.SelectedItem is RecipeModel) { 
-                RecipeModel model = (RecipeModel) listBox1.SelectedItem;
+            if (listBox1.SelectedItem is RecipeModel model)
+            {
                 Recipe recipe = model.toRecipe();
                 ratingItem.Text = recipe.GetRatingStars();
                 titleItem.Text = recipe.Title;
                 portionsItem.Text = recipe.Portions.ToString();
                 difficultyItem.Text = recipe.GetDifficultyText();
                 totaltimeItem.Text = recipe.GetTotalMinutesInText();
-                Debug.WriteLine(recipe.Image);
                 pictureBox4.Image = recipe.Image;
                 listBox2.Items.Clear();
                 foreach (string item in recipe.Ingredients)
@@ -297,8 +233,6 @@ namespace Wyszukiwarka_Przepisów
         private void iconButton8_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/Wenusix/RecipeSeacher");
-
-
         }
     }
 }
