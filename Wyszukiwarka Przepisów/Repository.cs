@@ -13,6 +13,7 @@ namespace Wyszukiwarka_Przepisów
         void Save(T entity);
         void SaveAll(List<T> list);
         void Clear();
+        int Count();
 
     }
 }

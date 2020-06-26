@@ -71,6 +71,8 @@
             this.contact = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.code = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             panelTitleBar = new System.Windows.Forms.Panel();
             panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
@@ -83,6 +85,7 @@
             this.cookidoo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.contact.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitleBar
@@ -398,6 +401,8 @@
             // search
             // 
             this.search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(163)))), ((int)(((byte)(26)))));
+            this.search.Controls.Add(this.pictureBox4);
+            this.search.Controls.Add(this.label5);
             this.search.Controls.Add(this.titleItem);
             this.search.Controls.Add(this.difficultyItem);
             this.search.Controls.Add(this.portionsItem);
@@ -424,7 +429,7 @@
             // titleItem
             // 
             this.titleItem.AutoSize = true;
-            this.titleItem.Location = new System.Drawing.Point(640, 210);
+            this.titleItem.Location = new System.Drawing.Point(640, 119);
             this.titleItem.Name = "titleItem";
             this.titleItem.Size = new System.Drawing.Size(51, 13);
             this.titleItem.TabIndex = 15;
@@ -433,7 +438,7 @@
             // difficultyItem
             // 
             this.difficultyItem.AutoSize = true;
-            this.difficultyItem.Location = new System.Drawing.Point(640, 283);
+            this.difficultyItem.Location = new System.Drawing.Point(641, 203);
             this.difficultyItem.Name = "difficultyItem";
             this.difficultyItem.Size = new System.Drawing.Size(73, 13);
             this.difficultyItem.TabIndex = 14;
@@ -442,7 +447,7 @@
             // portionsItem
             // 
             this.portionsItem.AutoSize = true;
-            this.portionsItem.Location = new System.Drawing.Point(640, 267);
+            this.portionsItem.Location = new System.Drawing.Point(640, 184);
             this.portionsItem.Name = "portionsItem";
             this.portionsItem.Size = new System.Drawing.Size(72, 13);
             this.portionsItem.TabIndex = 13;
@@ -451,7 +456,7 @@
             // ratingItem
             // 
             this.ratingItem.AutoSize = true;
-            this.ratingItem.Location = new System.Drawing.Point(640, 230);
+            this.ratingItem.Location = new System.Drawing.Point(640, 138);
             this.ratingItem.Name = "ratingItem";
             this.ratingItem.Size = new System.Drawing.Size(61, 13);
             this.ratingItem.TabIndex = 12;
@@ -460,7 +465,7 @@
             // totaltimeItem
             // 
             this.totaltimeItem.AutoSize = true;
-            this.totaltimeItem.Location = new System.Drawing.Point(640, 250);
+            this.totaltimeItem.Location = new System.Drawing.Point(640, 163);
             this.totaltimeItem.Name = "totaltimeItem";
             this.totaltimeItem.Size = new System.Drawing.Size(74, 13);
             this.totaltimeItem.TabIndex = 11;
@@ -471,7 +476,7 @@
             this.listBox2.FormattingEnabled = true;
             this.listBox2.Location = new System.Drawing.Point(262, 313);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(226, 95);
+            this.listBox2.Size = new System.Drawing.Size(253, 95);
             this.listBox2.TabIndex = 10;
             // 
             // ingredientsLabel
@@ -487,7 +492,7 @@
             // difficultyLabel
             // 
             this.difficultyLabel.AutoSize = true;
-            this.difficultyLabel.Location = new System.Drawing.Point(530, 283);
+            this.difficultyLabel.Location = new System.Drawing.Point(530, 203);
             this.difficultyLabel.Name = "difficultyLabel";
             this.difficultyLabel.Size = new System.Drawing.Size(90, 13);
             this.difficultyLabel.TabIndex = 8;
@@ -496,7 +501,7 @@
             // portionLabel
             // 
             this.portionLabel.AutoSize = true;
-            this.portionLabel.Location = new System.Drawing.Point(530, 267);
+            this.portionLabel.Location = new System.Drawing.Point(530, 184);
             this.portionLabel.Name = "portionLabel";
             this.portionLabel.Size = new System.Drawing.Size(40, 13);
             this.portionLabel.TabIndex = 7;
@@ -505,7 +510,7 @@
             // totalTimeLabel
             // 
             this.totalTimeLabel.AutoSize = true;
-            this.totalTimeLabel.Location = new System.Drawing.Point(530, 250);
+            this.totalTimeLabel.Location = new System.Drawing.Point(530, 163);
             this.totalTimeLabel.Name = "totalTimeLabel";
             this.totalTimeLabel.Size = new System.Drawing.Size(104, 13);
             this.totalTimeLabel.TabIndex = 6;
@@ -514,7 +519,7 @@
             // ratingLabel
             // 
             this.ratingLabel.AutoSize = true;
-            this.ratingLabel.Location = new System.Drawing.Point(530, 231);
+            this.ratingLabel.Location = new System.Drawing.Point(530, 140);
             this.ratingLabel.Name = "ratingLabel";
             this.ratingLabel.Size = new System.Drawing.Size(42, 13);
             this.ratingLabel.TabIndex = 5;
@@ -523,7 +528,7 @@
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
-            this.titleLabel.Location = new System.Drawing.Point(530, 210);
+            this.titleLabel.Location = new System.Drawing.Point(530, 119);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(35, 13);
             this.titleLabel.TabIndex = 4;
@@ -646,6 +651,24 @@
             this.code.TabIndex = 9;
             this.code.Visible = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(198, 116);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 13);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Wyniki:";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(533, 255);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(181, 133);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 17;
+            this.pictureBox4.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -680,6 +703,7 @@
             this.cookidoo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.contact.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -728,6 +752,8 @@
         private System.Windows.Forms.Label totaltimeItem;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Label titleItem;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label5;
     }
 }
 

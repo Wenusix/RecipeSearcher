@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,7 @@ namespace Wyszukiwarka_Przepisów
 
         public Recipe toRecipe()
         {
+            Debug.WriteLine(RecipeRepository.GetRepository().Count());
             return RecipeRepository.GetRepository().FindById(Id);
         }
 

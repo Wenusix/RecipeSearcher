@@ -124,6 +124,8 @@ namespace Wyszukiwarka_Przepisów
             cookidoo.Visible = false;
             contact.Visible = false;
             code.Visible = false;
+            visibleSearchedItems(false);
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -265,6 +267,7 @@ namespace Wyszukiwarka_Przepisów
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
             using (WebClient wc = new WebClient())
             {
                 wc.Encoding = Encoding.UTF8;
@@ -279,7 +282,8 @@ namespace Wyszukiwarka_Przepisów
                         .Portions(Convert.ToInt32(i["portions"].ToString()))
                         .Rating(Convert.ToDouble(i["rating"].ToString()))
                         .Difficulty(i["difficulty"].ToString())
-                        .TotalTime(Convert.ToInt32(i["totaltime"].ToString()));
+                        .TotalTime(Convert.ToInt32(i["totaltime"].ToString()))
+                        .Image(i["link"].ToString());
 
                     foreach(var j in ((JArray) i["ingredients"]).Children())
                     {
@@ -321,7 +325,32 @@ namespace Wyszukiwarka_Przepisów
                 portionsItem.Text = recipe.Portions.ToString();
                 difficultyItem.Text = recipe.GetDifficultyText();
                 totaltimeItem.Text = recipe.TotalTime.ToString();
+                Debug.WriteLine(recipe.Image);
+                pictureBox4.Image = recipe.Image;
+                listBox2.Items.Clear();
+                foreach (string item in recipe.Ingredients)
+                {
+                    listBox2.Items.Add(item);
+                }
+                visibleSearchedItems(true);
             }
+        }
+
+        private void visibleSearchedItems(bool visible)
+        {
+            ratingItem.Visible = visible;
+            ratingLabel.Visible = visible;
+            titleItem.Visible = visible;
+            portionsItem.Visible = visible;
+            difficultyItem.Visible = visible;
+            totaltimeItem.Visible = visible;
+            pictureBox4.Visible = visible;
+            listBox2.Visible = visible;
+            titleLabel.Visible = visible;
+            portionLabel.Visible = visible;
+            difficultyLabel.Visible = visible;
+            totalTimeLabel.Visible = visible;
+          
         }
     }
 }

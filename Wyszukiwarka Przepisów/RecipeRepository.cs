@@ -32,6 +32,11 @@ namespace Wyszukiwarka_Przepisów
             recipies.Clear();
         }
 
+        public int Count()
+        {
+            return recipies.Count();
+        }
+
         public List<Recipe> FindAll()
         {
             return recipies;

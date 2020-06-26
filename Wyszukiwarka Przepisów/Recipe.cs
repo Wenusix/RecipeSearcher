@@ -18,17 +18,8 @@ namespace Wyszukiwarka_Przepisów
         public int TotalTime { get; private set; }
         public int Portions { get; private set; }
         public Difficulty Difficulty { get; private set; }
+        public Image Image { get; private set; }
 
-        public Image GetPhoto()
-        {
-            using (System.Net.WebClient webClient = new System.Net.WebClient())
-            {
-                using (Stream stream = webClient.OpenRead("https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/vimdb/"+Id))
-                {
-                    return Image.FromStream(stream);
-                }
-            }
-        }
 
         public static RecipeBuilder GetBuilder()
         {
@@ -40,13 +31,20 @@ namespace Wyszukiwarka_Przepisów
             return "https://cookidoo.pl/recipes/recipe/pl/" + Id;
         }
 
-        private Recipe(string id, string title, double rating, List<string> ingredients, int totalTime, int portions, string difficulty) : base(id, title)
+        private Recipe(string id, string title, double rating, List<string> ingredients, int totalTime, int portions, string difficulty, string image) : base(id, title)
         {
             
             Rating = rating;
             Ingredients = ingredients;
             TotalTime = totalTime;
             Portions = portions;
+            using (System.Net.WebClient webClient = new System.Net.WebClient())
+            {
+                using (Stream stream = webClient.OpenRead(image))
+                {
+                    Image = Image.FromStream(stream);
+                }
+            }
             switch (difficulty.ToLower())
             {
                 case "easy": Difficulty = Difficulty.EASY; break;
@@ -94,6 +92,7 @@ namespace Wyszukiwarka_Przepisów
             private int totaltime;
             private int portions;
             private string difficulty;
+            private string image;
 
             public RecipeBuilder Id(string id)
             {
@@ -130,10 +129,15 @@ namespace Wyszukiwarka_Przepisów
                 this.difficulty = difficulty;
                 return this;
             }
+            public RecipeBuilder Image(string image)
+            {
+                this.image = image;
+                return this;
+            }
 
             public Recipe Build()
             {
-                return new Recipe(id, title, rating, ingredients, totaltime, portions, difficulty);
+                return new Recipe(id, title, rating, ingredients, totaltime, portions, difficulty, image);
             }
 
         }
