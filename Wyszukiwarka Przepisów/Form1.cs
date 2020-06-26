@@ -253,7 +253,7 @@ namespace Wyszukiwarka_Przepisów
         private void Form1_Resize(object sender, EventArgs e)
         {
          
-    
+           
         }
 
         private void OpenRecipesList()
@@ -315,7 +315,12 @@ namespace Wyszukiwarka_Przepisów
         {
             if(listBox1.SelectedItem is RecipeModel) { 
                 RecipeModel model = (RecipeModel) listBox1.SelectedItem;
-                MessageBox.Show(model.toRecipe().Rating.ToString());
+                Recipe recipe = model.toRecipe();
+                ratingItem.Text = recipe.GetRatingStars();
+                titleItem.Text = recipe.Title;
+                portionsItem.Text = recipe.Portions.ToString();
+                difficultyItem.Text = recipe.GetDifficultyText();
+                totaltimeItem.Text = recipe.TotalTime.ToString();
             }
         }
     }

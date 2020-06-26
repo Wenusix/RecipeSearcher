@@ -71,6 +71,17 @@ namespace Wyszukiwarka_Przepisów
         {
             return recipeModelFactory(Id, Title);
         }
+        
+        public string GetRatingStars()
+        {
+            int rate = (int) Math.Round(Rating, MidpointRounding.AwayFromZero);
+            string toReturn = "";
+            for(int i = 0; i < rate; i++)
+            {
+                toReturn += "✰";
+            }
+            return toReturn;
+        }
 
 
 

@@ -469,7 +469,7 @@
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(591, 318);
+            this.listBox2.Location = new System.Drawing.Point(262, 313);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(226, 95);
             this.listBox2.TabIndex = 10;
@@ -477,7 +477,7 @@
             // ingredientsLabel
             // 
             this.ingredientsLabel.AutoSize = true;
-            this.ingredientsLabel.Location = new System.Drawing.Point(530, 330);
+            this.ingredientsLabel.Location = new System.Drawing.Point(198, 313);
             this.ingredientsLabel.Name = "ingredientsLabel";
             this.ingredientsLabel.Size = new System.Drawing.Size(55, 13);
             this.ingredientsLabel.TabIndex = 9;
@@ -532,7 +532,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(262, 210);
+            this.listBox1.Location = new System.Drawing.Point(262, 116);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(253, 173);
             this.listBox1.TabIndex = 3;
@@ -542,7 +542,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(259, 110);
+            this.label4.Location = new System.Drawing.Point(259, 53);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(132, 13);
             this.label4.TabIndex = 2;
@@ -550,7 +550,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(440, 174);
+            this.button1.Location = new System.Drawing.Point(687, 79);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -560,7 +560,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(275, 138);
+            this.textBox1.Location = new System.Drawing.Point(262, 81);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(404, 20);
             this.textBox1.TabIndex = 0;
@@ -655,13 +655,12 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(panelTitleBar);
             this.Controls.Add(this.panelMenu);
-            this.Controls.Add(this.appInf);
             this.Controls.Add(this.search);
+            this.Controls.Add(this.appInf);
             this.Controls.Add(this.code);
             this.Controls.Add(this.contact);
             this.Controls.Add(this.cookidoo);
             this.Controls.Add(this.favorite);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
