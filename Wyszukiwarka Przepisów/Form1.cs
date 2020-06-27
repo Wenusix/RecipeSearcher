@@ -19,7 +19,7 @@ namespace Wyszukiwarka_Przepisów
 
         private PanelManagingUtil managingUtil = PanelManagingUtil.getInstance();
         private Control[] panels;
-        private static readonly string API = "192.168.1.19:8080";
+        private static readonly string API = "51.83.135.15:12345";
 
         public Form1()
         {
